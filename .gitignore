@@ -1,0 +1,5 @@
+.DS_Store
+/source/statics/*
+CNAME
+opensource.json
+node_modules
