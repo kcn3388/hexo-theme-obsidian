@@ -1,4 +1,6 @@
+<% if (theme.l2d.enable == true) { %>
 <%- js(['live2d-widget/autoload.js'])%>
+<% } %>
 <% if (theme.gitalk.enable == true) { %> <%-
 css(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css'])%> <%-
 js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%> <% } %> <%-
