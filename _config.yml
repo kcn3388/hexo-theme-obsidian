@@ -109,7 +109,7 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: '6d8662c2e315e96b4483'
   clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
@@ -211,10 +211,13 @@ beianloc: 粤ICP备
 beianid: 2021022134号
 
 mouse_effect: 
-  pop: true
+  pop: false
   font: false
 
 mouse:
-  enable: true
+  enable: false
   default: /mouse_type/package1/arr118.png
   pointer: /mouse_type/package1/arr117.png
+
+l2d:
+  enable: false
