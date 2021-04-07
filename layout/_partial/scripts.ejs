@@ -100,23 +100,8 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
 </script>
 <% } %>
 
-<% if (theme.mouse_effect.pop) { %>
-<style>
-    .fireworks {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-<canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
-<%- js(['js/mouse/pop/anime.min.js']) %>
-<%- js(['js/mouse/pop/cursor.js']) %>
-<% } %>
-
-<% if (theme.mouse_effect.font) { %>
-<%- js(['js/mouse/font.js']) %>
+<% if (theme.mouse_effect.enable) { %>
+<%- js([theme.mouse_effect.file]) %>
 <% } %>
 
 <% if(theme.mouse.enable) { %>
