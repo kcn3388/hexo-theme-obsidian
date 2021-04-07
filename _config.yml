@@ -211,8 +211,8 @@ beianloc: 粤ICP备
 beianid: 2021022134号
 
 mouse_effect: 
-  pop: true
-  font: false
+  enable: true
+  file: /js/mouse/pop.js
 
 mouse:
   enable: true
