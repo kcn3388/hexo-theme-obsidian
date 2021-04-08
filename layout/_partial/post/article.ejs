@@ -131,10 +131,15 @@
                                     class=" iconfont icon-bilibili"></span></a></dd>
                         <% } %>
                         <% if (page.author){%>
-                        <dd></dd>
-                        <dd><a href="<%- page.socials.page %>" target="_blank"><span
-                                    class=" iconfont icon-page"></span></a></dd>
-                        <dd></dd>
+                        <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
+                        <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
+                        <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
+                        <dd><a href="<%- page.socials.page.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page.name %>"></span></a></dd>
+                        <dd><a href="<%- page.socials.page2.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page2.name %>"></span></a></dd>
+                        <dd><a href="<%- page.socials.page3.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page3.name %>"></span></a></dd>
                         <% } %>
                     </dl>
                 </div>
