@@ -52,6 +52,7 @@
 	overflow: hidden;
 	padding: 5px 10px;
 	position: absolute;
+	top: -30px;
 	text-overflow: ellipsis;
 	transition: opacity 1s;
 	width: 250px;
