@@ -1,4 +1,4 @@
-Learning-Markdown (Markdown 入门参考)
+﻿Learning-Markdown (Markdown 入门参考)
 ====
 
 >[第一版备份在这里](https://github.com/LearnShare/Learning-Markdown/tree/v1)
