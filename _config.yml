@@ -228,3 +228,6 @@ mouse:
 
 l2d:
   enable: true
+
+aplayer:
+  enable: true
