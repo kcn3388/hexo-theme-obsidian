@@ -241,7 +241,7 @@ function loadWidget(config) {
 			});
 			$("#live2d").mousedown(function(e) {
 				if(e.which==3){
-				showMessage("秘密通道<br/><a href=\"../../\" title=\"首页\">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://bt.kcn3388.com/kcn3388\" title=\"后台\" target=\"_blank\">后台</a> ",4000,10);
+				showMessage("秘密通道<br/><a href=\"../../\">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://bt.kcn3388.com/kcn3388\" >后台</a> <a href=\"http://xianbai.me/learn-md/index.html\">Markdown语法</a>",4000,10);
 				}
 			});
 			$("#live2d").bind("contextmenu", function(e) {
