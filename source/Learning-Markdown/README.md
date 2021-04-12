@@ -1,35 +1,35 @@
-ï»¿Learning-Markdown (Markdown å…¥é—¨å‚è€ƒ)
+Learning-Markdown (Markdown ÈëÃÅ²Î¿¼)
 ====
 
->[ç¬¬ä¸€ç‰ˆå¤‡ä»½åœ¨è¿™é‡Œ](https://github.com/LearnShare/Learning-Markdown/tree/v1)
+>[µÚÒ»°æ±¸·İÔÚÕâÀï](https://github.com/LearnShare/Learning-Markdown/tree/v1)
 
 [Code on Github](https://github.com/LearnShare/Learning-Markdown/tree/v2)
 
-[åœ¨çº¿é˜…è¯»](http://xianbai.me/learn-md/)
+[ÔÚÏßÔÄ¶Á](http://xianbai.me/learn-md/)
 
-æ–‡æ¡£ç›®å½•
+ÎÄµµÄ¿Â¼
 ----
 
-* [å…³äº Markdown](article/about/readme.md)
-  - [ç¬¬ä¸€ä¸ª Markdown æ–‡æ¡£](article/about/helloworld.md)
+* [¹ØÓÚ Markdown](article/about/readme.md)
+  - [µÚÒ»¸ö Markdown ÎÄµµ](article/about/helloworld.md)
   - [Hello.md](article/about/hello.md)
-* [è¯­æ³•](article/syntax/readme.md)
-  - [æ®µè½ä¸æ¢è¡Œ](article/syntax/paragraphs-and-line-breaks.md)
-  - [æ ‡é¢˜](article/syntax/headers.md)
-  - [å¼•ç”¨](article/syntax/blockquotes.md)
-  - [åˆ—è¡¨](article/syntax/lists.md)
-  - [ä»£ç ](article/syntax/code.md)
-  - [åˆ†éš”çº¿](article/syntax/horizontal-rule.md)
-  - [è¶…é“¾æ¥](article/syntax/links.md)
-  - [å›¾ç‰‡](article/syntax/images.md)
-  - [å¼ºè°ƒ](article/syntax/emphasis.md)
-  - [å­—ç¬¦è½¬ä¹‰](article/syntax/blackslash-escapes.md)
-* [æ‰©å±•è¯­æ³•](article/extension/readme.md)
-  - [åˆ é™¤çº¿](article/extension/strikethrougn.md)
-  - [ä»£ç å—å’Œè¯­æ³•é«˜äº®](article/extension/code-blocks-and-highlighting.md)
-  - [è¡¨æ ¼](article/extension/table.md)
+* [Óï·¨](article/syntax/readme.md)
+  - [¶ÎÂäÓë»»ĞĞ](article/syntax/paragraphs-and-line-breaks.md)
+  - [±êÌâ](article/syntax/headers.md)
+  - [ÒıÓÃ](article/syntax/blockquotes.md)
+  - [ÁĞ±í](article/syntax/lists.md)
+  - [´úÂë](article/syntax/code.md)
+  - [·Ö¸ôÏß](article/syntax/horizontal-rule.md)
+  - [³¬Á´½Ó](article/syntax/links.md)
+  - [Í¼Æ¬](article/syntax/images.md)
+  - [Ç¿µ÷](article/syntax/emphasis.md)
+  - [×Ö·û×ªÒå](article/syntax/blackslash-escapes.md)
+* [À©Õ¹Óï·¨](article/extension/readme.md)
+  - [É¾³ıÏß](article/extension/strikethrougn.md)
+  - [´úÂë¿éºÍÓï·¨¸ßÁÁ](article/extension/code-blocks-and-highlighting.md)
+  - [±í¸ñ](article/extension/table.md)
   - [Task List](article/extension/task-list.md)
-* [ç¼–è¾‘å™¨ä¸æ‰©å±•](article/tools/readme.md)
+* [±à¼­Æ÷ÓëÀ©Õ¹](article/tools/readme.md)
   - [MarkdownPad](article/tools/markdownpad.md)
   - [Texts](article/tools/texts.md)
   - [MarkPad](article/tools/markpad.md)
@@ -47,12 +47,12 @@
   - [Cmd Markdown](article/tools/cmd-markdown.md)
   - [StackEdit](article/tools/stackedit.md)
   - [Dillinger](article/tools/dillinger.md)
-* [æ ¼å¼è½¬æ¢](article/convert/readme.md)
+* [¸ñÊ½×ª»»](article/convert/readme.md)
   - [HTML](article/convert/html.md)
   - [PDF](article/convert/pdf.md)
   - [Word](article/convert/word.md)
 
-å‚è€ƒèµ„æ–™
+²Î¿¼×ÊÁÏ
 ----
 
 1. [Project Markdown][project-markdown]
@@ -67,12 +67,12 @@
 [wiki-markdown]: http://zh.wikipedia.org/zh-cn/Markdown "Wiki Markdown"
 [xbeta-markdown]: http://xbeta.org/wiki/show/Markdown "XBeta Wiki Markdown"
 
-å…±äº«åè®®
+¹²ÏíĞ­Òé
 ----
 
-æœ¬æ–‡ç”± [LearnShare][learnshare] æ•´ç†å¹¶åœ¨ [CC BY-SA 3.0][CC] åè®®ä¸‹å‘å¸ƒï¼Œä¸»è¦ä¸ºäº†ç»™è‡ªå·±å’Œå„ä½æœ‹å‹ä½œä¸ºå­¦ä¹  Markdown çš„å…¥é—¨åŠå‚è€ƒèµ„æ–™ã€‚
+±¾ÎÄÓÉ [LearnShare][learnshare] ÕûÀí²¢ÔÚ [CC BY-SA 3.0][CC] Ğ­ÒéÏÂ·¢²¼£¬Ö÷ÒªÎªÁË¸ø×Ô¼ººÍ¸÷Î»ÅóÓÑ×÷ÎªÑ§Ï° Markdown µÄÈëÃÅ¼°²Î¿¼×ÊÁÏ¡£
 
-è¯·å„ä½éµå¾ª [Markdown: License][license] åŠå…¶å®ƒå‚è€ƒæ–‡çŒ®çš„å…±äº«åè®®æ¥ä½¿ç”¨ã€ä¿®æ”¹å’Œå‘å¸ƒã€‚
+Çë¸÷Î»×ñÑ­ [Markdown: License][license] ¼°ÆäËü²Î¿¼ÎÄÏ×µÄ¹²ÏíĞ­ÒéÀ´Ê¹ÓÃ¡¢ĞŞ¸ÄºÍ·¢²¼¡£
 
 [learnshare]: https://github.com/learnshare "LearnShare"
 [CC]: http://zh.wikipedia.org/wiki/Wikipedia:CC "Wiki: CC"
