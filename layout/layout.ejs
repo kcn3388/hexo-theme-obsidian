@@ -19,6 +19,22 @@
     </div>
 </body>
 <footer>
+    <!-- 引用依赖 -->
+    <link rel="stylesheet" href="../../aplayer/dist/APlayer.min.css">
+    <script src="../../aplayer/dist/APlayer.min.js"></script>
+    <script src="../../js/Meting.min.js"></script>
+    <!-- 我使用的APlayer本体 -->
+    <div class="aplayer" 
+        data-id="450007071" 
+        data-server="netease" 
+        data-type="playlist" 
+        data-fixed="true" 
+        data-autoplay="false" 
+        data-order="random" 
+        data-volume="0.55" 
+        data-preload="true" >
+    </div>
+    <!--如果将本体放在body里面导致页面加载出现问题，请尝试放到body体后面-->
     <p class="copyright" id="copyright">
         &copy; <%= date(new Date(), 'YYYY') %>
         <span class="gradient-text">
