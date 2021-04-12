@@ -219,7 +219,7 @@ police:
 
 mouse_effect: 
   enable: true
-  file: /js/mouse/pop.js
+  file: /js/mouse/font.js
 
 mouse:
   enable: true
