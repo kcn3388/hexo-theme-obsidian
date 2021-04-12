@@ -19,6 +19,7 @@
     </div>
 </body>
 <footer>
+    <% if (theme.aplayer.enable == true) { %>
     <!-- 引用依赖 -->
     <link rel="stylesheet" href="../../aplayer/dist/APlayer.min.css">
     <script src="../../aplayer/dist/APlayer.min.js"></script>
@@ -35,6 +36,7 @@
         data-preload="true"
         data-showlrc="0" >
     </div>
+    <% } %>
     <!--如果将本体放在body里面导致页面加载出现问题，请尝试放到body体后面-->
     <p class="copyright" id="copyright">
         &copy; <%= date(new Date(), 'YYYY') %>
