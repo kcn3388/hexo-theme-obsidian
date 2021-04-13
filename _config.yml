@@ -208,13 +208,11 @@ search:
 
 beian: 
   enable: true
-  beianloc: 粤ICP备
-  beianid: 2021022134号
+  beianid: 粤ICP备2021022134号
 
 police: 
   enable: true
-  beianloc: 粤公网安备
-  beianid: 44010602009049号
+  beianid: 粤公网安备44010602009049号
   beianicon: /img/beian.png
 
 mouse_effect: 
