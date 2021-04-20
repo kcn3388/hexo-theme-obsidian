@@ -113,8 +113,6 @@ gitalk:
   autoExpand: true
   clientID: '6d8662c2e315e96b4483'
   clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
-  clientID2: ''
-  clientSecret2: ''
   repo: 'blog-comments'
   owner: 'kcn3388'
   admin: ['kcn3388']
