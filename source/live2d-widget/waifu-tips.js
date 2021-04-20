@@ -241,7 +241,7 @@ function loadWidget(config) {
 			});
 			$("#live2d").mousedown(function(e) {
 				if(e.which==3){
-				showMessage("秘密通道<br/><a href=\"../../\">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://bt.kcn3388.com/kcn3388\" >后台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <a href=\"https://xianbai.me/learn-md/index.html\">Markdown语法&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>",4000,10);
+				showMessage("秘密通道<br/><a href=\"../../\">首页&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://bt.kcn3388.com/kcn3388\" >后台&nbsp;&nbsp;&nbsp;&nbsp;</a> <a href=\"https://xianbai.me/learn-md/index.html\">Markdown语法&nbsp;&nbsp;&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;&nbsp;&nbsp;</a>",4000,10);
 				}
 			});
 			$("#live2d").bind("contextmenu", function(e) {
