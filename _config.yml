@@ -62,10 +62,10 @@ socials:
 TOC: true
 
 # Home page first post default cover image, default use cover
-welcome_cover: /img/cover.jpg
+welcome_cover: /img/default-cover.jpg
 
 # Article default cover image
-cover: /img/welcome-cover.jpg
+cover: /img/default-cover.jpg
 
 # Avatar
 avatar: /img/avatar.jpg
