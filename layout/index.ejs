@@ -2,10 +2,12 @@
 <div id="container">
     <%- partial("_partial/screen", null, {cache: false}) %>
     <div id="primary">
-        <%- partial('_partial/list', {start: 1}) %>
-        <% if (theme.gitalk.enable == true){%>
-        <%- partial('_partial/post/gitalk_dark', {post: page}) %>
-        <% } %>
+        <div class="post" id="post">
+            <%- partial('_partial/list', {start: 1}) %>
+            <% if (theme.gitalk.enable == true){%>
+            <%- partial('_partial/post/gitalk_dark', {post: page}) %>
+            <% } %>
+        </div>
     </div>
     <% if (page.total > 1 && page.next_link){ %>
     <div id="pager"><a href="<%- url_for(page.next_link) %>" class="more" data-loading="<%= __('loading') %>" data-load-more="<%= __('load_more') %>"><%= __('load_more') %></a></div>
