@@ -1,16 +1,8 @@
 <% if (theme.gitalk.enable == true){ %>
-    <style>
-        .gt-ico-text, .gt-no-init, .gt-comments-null, .gt-meta, .gt-counts, .gt-link, .gt-link-counts {
-            color: #FFFFFF;
-        }
-        .gt-btn-text {
-            color: #000000;
-        }
-    </style>
     <div id='gitalk-container' class="comment link"
         data-ae='<%=theme.gitalk.autoExpand%>'
-        data-ci='<%=theme.gitalk.clientID%>'
-        data-cs='<%=theme.gitalk.clientSecret%>'
+        data-ci='<%=theme.gitalk.clientID2%>'
+        data-cs='<%=theme.gitalk.clientSecret2%>'
         data-r='<%=theme.gitalk.repo%>'
         data-o='<%=theme.gitalk.owner%>'
         data-a='<%=theme.gitalk.admin%>'
