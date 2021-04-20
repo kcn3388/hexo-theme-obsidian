@@ -1,4 +1,12 @@
 <% if (theme.gitalk.enable == true){ %>
+    <script>
+        function clear() {
+        Source=document.body.firstChild.data;
+        document.open();
+        document.close();
+        document.body.innerHTML=Source;
+        }
+    </script>
     <div id='gitalk-container' class="comment link"
         data-ae='<%=theme.gitalk.autoExpand%>'
         data-ci='<%=theme.gitalk.clientID%>'
@@ -8,5 +16,6 @@
         data-a='<%=theme.gitalk.admin%>'
         data-d='<%=theme.gitalk.distractionFreeMode%>'
         data-p='<%=theme.gitalk.proxy%>'
+        onload=clear()
     ><%= __('comment') %></div>
 <%}%>
