@@ -225,7 +225,7 @@ mouse:
   pointer: /mouse_type/package1/arr117.png
 
 l2d:
-  enable: false
+  enable: true
 
 aplayer:
-  enable: false
+  enable: true
