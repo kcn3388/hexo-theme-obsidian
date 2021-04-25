@@ -14,10 +14,10 @@ A dark Hexo theme, it's responsive, simple but elegant.
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[PREVIEW](http://tridiamond.tech)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[PREVIEW](https://kcn3388.com/)** | **[CHANGES](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
-🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
-**[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+🇨🇳 **[中文文档](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/README_CN.md)** |
+**[更变日志](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 </div>
 
@@ -171,6 +171,8 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
@@ -230,6 +232,38 @@ codemirror:
 
 # Enabling mathjax support
 mathjax: true
+
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+beian:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+
+
+# Custom mouse style
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+
 ```
 
 </details>
@@ -304,6 +338,26 @@ categories: - Category1 - Category2
 tags: - Tag1 - Tag2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
+
+author: 3rdparty author
+socials: 
+  page: https://example
+avatar: /example.jpg
+slogan: example
+
+socials:
+    page: 
+        link: social platform link
+        name: the iconfont you want to use, for example: icon-bilibili-fill
+        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### Create categories page
@@ -412,9 +466,19 @@ However you could just **sharing this project with your friends**, that would _h
 
 Thanks for your love in advance! ☀️
 
-|                                                                                                    Donating using Paypal                                                                                                     |                                                                                                 Donating in China                                                                                                 |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> | <a href="https://afdian.net/@tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> |
+|                                                                                                                Donating using Paypal                                                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" style="height: 60px !important;width: 217px !important;" ></a> |
+
+> All donator will be enlisted as Coffee Supporter and displayed in the Sponsor list in this section.
+
+---
+
+|                                         Wechat 微信支付                                         |                                        Alipay 支付宝支付                                        |
+| :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| <img src="https://img-blog.csdnimg.cn/20210330175112304.png" alt="Buy Me A Coffee" width="150"> | <img src="https://img-blog.csdnimg.cn/20210330175153827.png" alt="Buy Me A Coffee" width="150"> |
+
+> 所有赞助人将被列为咖啡支持者，并在本节的赞助人名单中显示。
 
 ## Join the Community
 

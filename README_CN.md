@@ -14,10 +14,10 @@ v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ <br
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[预览](http://tridiamond.tech)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+**[预览](https://kcn3388.com/)** | **[更变日志](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
-🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
-**[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+🇺🇸 **[English Doc](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/README.md)** |
+**[ChangeLog](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 </div>
 
@@ -167,6 +167,8 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # 自定义代理服务器以防止403错误
 
 # Valine 评论插件 (推荐使用!)
 # 查看 https://valine.js.org/quickstart.html
@@ -229,12 +231,34 @@ codemirror:
 # 启用 mathjax 支持
 mathjax: true
 
+# 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
+beian: 
 # 启用备案
-beian: true
+  enable: true
 # 备案地区，例子：粤ICP备
-#beianloc:
-# 备案ID，例子：2021022134号
-#beianid:
+  beianloc:
+# 备案号，例子：2021022134号
+  beianid:
+
+# 公安互联网备案
+beian:
+# 启用备案
+  enable: true
+# 备案地区，例子：粤公网安备
+  beianloc:
+# 备案号，例子：44010602009049号
+  beianid:
+# 公安互联网备案图标，例子：/img/beian.png
+  beianicon:
+
+# 自定义鼠标样式
+mouse:
+# 启用
+  enable: true
+# 默认样式
+  default: /default.png
+# 悬浮及点击样式
+  pointer: /hover.png
 
 ```
 
@@ -305,16 +329,30 @@ preview: 300
 ```markdown
 title: My awesome title
 date: 2019-07-14 18:38:45
-author: example
 categories: - 分类 1 - 分类 2
 tags: - 标签 1 - 标签 2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
-is3rdparty: true
+
+author: 第三方作者名
 socials: 
   page: https://example
 avatar: /example.jpg
 slogan: example
+
+socials:
+    page: 
+        link: 社交平台链接
+        name: 需要的iconfont名称，例子：icon-bilibili-fill
+        path: iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### 创建分类页
