@@ -45,6 +45,12 @@ var description = '';
     <%- css(['css/font_bili/iconfont.css']) %>
     <%- css(['css/font_page/iconfont.css']) %>
     <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
+    <% if (theme.aplayer.enable == true) { %>
+    <%- js(['js/loadaplayer.js'])%>
+    <!-- 引用依赖 -->
+    <%- css(['aplayer/dist/APlayer.min.css'])%>
+    <%- js(['aplayer/dist/APlayer.min.js', 'js/Meting.min.js'])%>
+    <% } %>
     
     <% if(theme.mouse.enable) { %>
     <style>
