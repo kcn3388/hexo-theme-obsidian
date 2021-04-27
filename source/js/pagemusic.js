@@ -1,7 +1,7 @@
 var e = document.getElementById("musicid")
 if (typeof (musicURL) == "undefined") {
-    var musicURL = "//localhost:3000/song/url?id=" + e.className
-    var detailURL = "//localhost:3000/song/detail?ids=" + e.className
+    var musicURL = "//api.kcn3388.com/song/url?id=" + e.className
+    var detailURL = "//api.kcn3388.com/song/detail?ids=" + e.className
     var musicRequest = new XMLHttpRequest;
     var dataRequest = new XMLHttpRequest;
     var musicData;
