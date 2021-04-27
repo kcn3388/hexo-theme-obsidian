@@ -29,7 +29,7 @@ dataRequest.onreadystatechange = function () {
             preload: 'metadata',
             audio: [{
                 name: detailData.songs[0].name,
-                artist: detailData.songs[0].name,
+                artist: detailData.songs[0].ar.name,
                 url: musicData.data[0].url,
                 cover: detailData.songs[0].al.picUrl,
                 theme: '#ebd0c2'
