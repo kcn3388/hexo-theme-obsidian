@@ -1,5 +1,8 @@
 // 注意：live2d_path 参数应使用绝对路径
-var root_domain = "http://" + window.location.host;
+if (typeof(root_domain)=="undefined")
+{
+    var root_domain = "http://" + window.location.host;
+}
 const live2d_path = root_domain + "/live2d-widget/";
 //const live2d_path = "/live2d-widget/";
 
