@@ -110,7 +110,7 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
+  enable: true
   autoExpand: true
   clientID: '6d8662c2e315e96b4483'
   clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
