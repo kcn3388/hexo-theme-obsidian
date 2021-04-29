@@ -1,11 +1,15 @@
+String.prototype.splice = function(start, newStr) {
+    return this.slice(0, start) + newStr + this.slice(start);
+};
 var e = document.getElementById("musicid")
 if (typeof (musicURL) == "undefined") {
     var musicURL
     var detailURL
     var musicRequest = new XMLHttpRequest;
     var dataRequest = new XMLHttpRequest;
-    var musicData;
+    var musicData
     var detailData
+    var httpsurl
 }
 
 musicURL = "//api.kcn3388.com/song/url?id=" + e.className
@@ -14,7 +18,9 @@ detailURL = "//api.kcn3388.com/song/detail?ids=" + e.className
 musicRequest.onreadystatechange = function () {
     if (musicRequest.readyState == 4 && musicRequest.status == 200) {
         musicData = JSON.parse(musicRequest.responseText);
-        console.log(musicData.data[0])
+        console.log(musicData.data[0]);
+        httpsurl = musicData.data[0].url.splice(4, "s");
+        console.log(httpsurl)
     }
 }
 musicRequest.open('GET', musicURL);
