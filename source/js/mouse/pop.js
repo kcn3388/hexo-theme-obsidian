@@ -69,7 +69,7 @@ $jscomp.polyfill = function (e, r, p, m) { if (r) { p = $jscomp.global; e = e.sp
         function c() { return window.Promise && new Promise(function (a) { return p = a }) } function d(a) { return g.reversed ? g.duration - a : a } function b(a) {
             for (var b = 0, c = {}, d = g.animations, f = d.length; b < f;) {
                 var e = d[b],
-                k = e.animatable, h = e.tweens, n = h.length - 1, l = h[n]; n && (l = r(h, function (b) { return a < b.end })[0] || l); for (var h = Math.min(Math.max(a - l.start - l.delay, 0), l.duration) / l.duration, w = isNaN(h) ? 1 : l.easing(h, l.elasticity), h = l.to.strings, p = l.round, n = [], m = void 0, m = l.to.numbers.length, t = 0; t < m; t++) { var x = void 0, x = l.to.numbers[t], q = l.from.numbers[t], x = l.isPath ? Y(l.value, w * x) : q + w * (x - q); p && (l.isColor && 2 < t || (x = Math.round(x * p) / p)); n.push(x) } if (l = h.length) for (m = h[0], w = 0; w < l; w++)p = h[w + 1], t = n[w], isNaN(t) || (m = p ? m + (t + p) : m + (t + " "));
+                    k = e.animatable, h = e.tweens, n = h.length - 1, l = h[n]; n && (l = r(h, function (b) { return a < b.end })[0] || l); for (var h = Math.min(Math.max(a - l.start - l.delay, 0), l.duration) / l.duration, w = isNaN(h) ? 1 : l.easing(h, l.elasticity), h = l.to.strings, p = l.round, n = [], m = void 0, m = l.to.numbers.length, t = 0; t < m; t++) { var x = void 0, x = l.to.numbers[t], q = l.from.numbers[t], x = l.isPath ? Y(l.value, w * x) : q + w * (x - q); p && (l.isColor && 2 < t || (x = Math.round(x * p) / p)); n.push(x) } if (l = h.length) for (m = h[0], w = 0; w < l; w++)p = h[w + 1], t = n[w], isNaN(t) || (m = p ? m + (t + p) : m + (t + " "));
                 else m = n[0]; ha[e.type](k.target, e.property, m, c, k.id); e.currentValue = m; b++
             } if (b = Object.keys(c).length) for (d = 0; d < b; d++)H || (H = E(document.body, "transform") ? "transform" : "-webkit-transform"), g.animatables[d].target.style[H] = c[d].join(" "); g.currentTime = a; g.progress = a / g.duration * 100
         } function f(a) { if (g[a]) g[a](g) } function e() { g.remaining && !0 !== g.remaining && g.remaining-- } function k(a) {
@@ -112,7 +112,7 @@ $jscomp.polyfill = function (e, r, p, m) { if (r) { p = $jscomp.global; e = e.sp
             var c = q(a); c.pause(); c.duration = 0; c.add = function (d) {
                 c.children.forEach(function (a) {
                     a.began =
-                    !0; a.completed = !0
+                        !0; a.completed = !0
                 }); m(d).forEach(function (b) { var d = z(b, D(S, a || {})); d.targets = d.targets || a.targets; b = c.duration; var e = d.offset; d.autoplay = !1; d.direction = c.direction; d.offset = h.und(e) ? b : L(e, b); c.began = !0; c.completed = !0; c.seek(d.offset); d = q(d); d.began = !0; d.completed = !0; d.duration > b && (c.duration = d.duration); c.children.push(d) }); c.seek(0); c.reset(); c.autoplay && c.restart(); return c
             }; return c
         }; q.random = function (a, c) { return Math.floor(Math.random() * (c - a + 1)) + a }; return q
@@ -120,12 +120,12 @@ $jscomp.polyfill = function (e, r, p, m) { if (r) { p = $jscomp.global; e = e.sp
 
 function updateCoords(e) {
     pointerX = (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left,
-    pointerY = e.clientY || e.touches[0].clientY - canvasEl.getBoundingClientRect().top
+        pointerY = e.clientY || e.touches[0].clientY - canvasEl.getBoundingClientRect().top
 }
 function setParticuleDirection(e) {
     var t = anime.random(0, 360) * Math.PI / 180
-      , a = anime.random(50, 180)
-      , n = [-1, 1][anime.random(0, 1)] * a;
+        , a = anime.random(50, 180)
+        , n = [-1, 1][anime.random(0, 1)] * a;
     return {
         x: e.x + n * Math.cos(t) * 0.5,
         y: e.y + n * Math.sin(t) * 0.5
@@ -134,38 +134,38 @@ function setParticuleDirection(e) {
 function createParticule(e, t) {
     var a = {};
     return a.x = e,
-    a.y = t,
-    a.color = colors[anime.random(0, colors.length - 1)],
-    a.radius = anime.random(10, 25),
-    a.endPos = setParticuleDirection(a),
-    a.draw = function() {
-        ctx.beginPath(),
-        ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),
-        ctx.fillStyle = a.color,
-        ctx.fill()
-    }
-    ,
-    a
+        a.y = t,
+        a.color = colors[anime.random(0, colors.length - 1)],
+        a.radius = anime.random(10, 25),
+        a.endPos = setParticuleDirection(a),
+        a.draw = function () {
+            ctx.beginPath(),
+                ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),
+                ctx.fillStyle = a.color,
+                ctx.fill()
+        }
+        ,
+        a
 }
 function createCircle(e, t) {
     var a = {};
     return a.x = e,
-    a.y = t,
-    a.color = "#F00",
-    a.radius = .1,
-    a.alpha = .5,
-    a.lineWidth = 6,
-    a.draw = function() {
-        ctx.globalAlpha = a.alpha,
-        ctx.beginPath(),
-        ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),
-        ctx.lineWidth = a.lineWidth,
-        ctx.strokeStyle = a.color,
-        ctx.stroke(),
-        ctx.globalAlpha = 1
-    }
-    ,
-    a
+        a.y = t,
+        a.color = "#F00",
+        a.radius = .1,
+        a.alpha = .5,
+        a.lineWidth = 6,
+        a.draw = function () {
+            ctx.globalAlpha = a.alpha,
+                ctx.beginPath(),
+                ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),
+                ctx.lineWidth = a.lineWidth,
+                ctx.strokeStyle = a.color,
+                ctx.stroke(),
+                ctx.globalAlpha = 1
+        }
+        ,
+        a
 }
 function renderParticule(e) {
     for (var t = 0; t < e.animatables.length; t++)
@@ -176,10 +176,10 @@ function animateParticules(e, t) {
         n.push(createParticule(e, t));
     anime.timeline().add({
         targets: n,
-        x: function(e) {
+        x: function (e) {
             return e.endPos.x
         },
-        y: function(e) {
+        y: function (e) {
             return e.endPos.y
         },
         radius: .1,
@@ -202,47 +202,47 @@ function animateParticules(e, t) {
     })
 }
 function debounce(fn, delay) {
-  var timer
-  return function () {
-    var context = this
-    var args = arguments
-    clearTimeout(timer)
-    timer = setTimeout(function () {
-      fn.apply(context, args)
-    }, delay)
-  }
+    var timer
+    return function () {
+        var context = this
+        var args = arguments
+        clearTimeout(timer)
+        timer = setTimeout(function () {
+            fn.apply(context, args)
+        }, delay)
+    }
 }
 
 var canvasEl = document.querySelector(".fireworks");
 if (canvasEl) {
     var ctx = canvasEl.getContext("2d")
-      , numberOfParticules = 30
-      , pointerX = 0
-      , pointerY = 0
-      , tap = "mousedown"
-      , colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"]
-      , setCanvasSize = debounce(function() {
-        canvasEl.width = 2 * window.innerWidth,
-        canvasEl.height = 2 * window.innerHeight,
-        canvasEl.style.width = window.innerWidth + "px",
-        canvasEl.style.height = window.innerHeight + "px",
-        canvasEl.getContext("2d").scale(2, 2)
-    },500);
-    document.addEventListener(tap, function(e) {
+        , numberOfParticules = 30
+        , pointerX = 0
+        , pointerY = 0
+        , tap = "mousedown"
+        , colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"]
+        , setCanvasSize = debounce(function () {
+            canvasEl.width = 2 * window.innerWidth,
+                canvasEl.height = 2 * window.innerHeight,
+                canvasEl.style.width = window.innerWidth + "px",
+                canvasEl.style.height = window.innerHeight + "px",
+                canvasEl.getContext("2d").scale(2, 2)
+        }, 500);
+    document.addEventListener(tap, function (e) {
         "sidebar" !== e.target.id && "toggle-sidebar" !== e.target.id && "A" !== e.target.nodeName && "IMG" !== e.target.nodeName
-        && (anime({
-            duration: 1800,
-            autoplay: false,
-            update: function() {
-                ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
-            },
-            complete: function() {
-                ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
-            }
-        }).play(),
-        updateCoords(e),
-        animateParticules(pointerX, pointerY))
+            && (anime({
+                duration: 1800,
+                autoplay: false,
+                update: function () {
+                    ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+                },
+                complete: function () {
+                    ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+                }
+            }).play(),
+                updateCoords(e),
+                animateParticules(pointerX, pointerY))
     }, !1),
-    setCanvasSize(),
-    window.addEventListener("resize", setCanvasSize, !1)
+        setCanvasSize(),
+        window.addEventListener("resize", setCanvasSize, !1)
 }
