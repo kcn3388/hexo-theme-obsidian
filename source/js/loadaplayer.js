@@ -25,7 +25,7 @@ function removelrc() {
             //以触发按钮的方式隐藏歌词，防止在点击显示歌词按钮时需要点击两次才能出现的问题
             document.querySelector(".aplayer-icon-lrc").click();
         }, 1);
-        console.log("success");
+        // console.log("success");
         return;
     }
 }
