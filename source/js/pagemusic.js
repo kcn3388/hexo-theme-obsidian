@@ -18,9 +18,9 @@ detailURL = "//api.kcn3388.com/song/detail?ids=" + e.className
 musicRequest.onreadystatechange = function () {
     if (musicRequest.readyState == 4 && musicRequest.status == 200) {
         musicData = JSON.parse(musicRequest.responseText);
-        console.log(musicData.data[0]);
+        // console.log(musicData.data[0]);
         httpsurl = musicData.data[0].url.splice(4, "s");
-        console.log(httpsurl)
+        // console.log(httpsurl)
     }
 }
 musicRequest.open('GET', musicURL);
@@ -28,7 +28,7 @@ musicRequest.send();
 dataRequest.onreadystatechange = function () {
     if (dataRequest.readyState == 4 && dataRequest.status == 200) {
         detailData = JSON.parse(dataRequest.responseText);
-        console.log(detailData.songs[0])
+        // console.log(detailData.songs[0])
         const ap1 = new APlayer({
             element: document.getElementById('player1'),
             mini: false,
@@ -39,7 +39,7 @@ dataRequest.onreadystatechange = function () {
             audio: [{
                 name: detailData.songs[0].name,
                 artist: detailData.songs[0].ar[0].name,
-                url: musicData.data[0].url,
+                url: httpsurl,
                 cover: detailData.songs[0].al.picUrl,
                 theme: '#ebd0c2'
             }]
