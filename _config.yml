@@ -179,7 +179,7 @@ codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
 # Enabling mathjax support
-mathjax: false
+mathjax: true
 
 # custom header HTML
 header_html: ''
