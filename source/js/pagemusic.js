@@ -22,9 +22,13 @@ musicRequest.onreadystatechange = function () {
         httpsurl = musicData.data[0].url.splice(4, "s");
         // console.log(httpsurl)
     }
+    dataRequest.open('GET', detailURL);
+    dataRequest.send();
 }
+
 musicRequest.open('GET', musicURL);
 musicRequest.send();
+
 dataRequest.onreadystatechange = function () {
     if (dataRequest.readyState == 4 && dataRequest.status == 200) {
         detailData = JSON.parse(dataRequest.responseText);
@@ -46,5 +50,3 @@ dataRequest.onreadystatechange = function () {
         });
     }
 }
-dataRequest.open('GET', detailURL);
-dataRequest.send();
