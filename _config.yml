@@ -214,7 +214,7 @@ beian:
 police: 
   enable: true
   beianid: 粤公网安备44010602009049号
-  beianicon: /img/beian.png
+  beianicon: https://kcn3388.club/hexo-theme-obsidian/src/img/beian.png
 
 mouse_effect: 
   enable: true
