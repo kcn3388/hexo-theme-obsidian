@@ -12,8 +12,8 @@ if (typeof (musicURL) == "undefined") {
     var httpsurl
 }
 
-musicURL = "//api.kcn3388.com/song/url?id=" + e.className
-detailURL = "//api.kcn3388.com/song/detail?ids=" + e.className
+musicURL = "//api.kcn3388.club/song/url?id=" + e.className
+detailURL = "//api.kcn3388.club/song/detail?ids=" + e.className
 
 musicRequest.onreadystatechange = function () {
     if (musicRequest.readyState == 4 && musicRequest.status == 200) {
