@@ -63,13 +63,13 @@ socials:
 TOC: true
 
 # Home page first post default cover image, default use cover
-welcome_cover: https://kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
+welcome_cover: https://res.kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
 
 # Article default cover image
-cover: https://kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
+cover: https://res.kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
 
 # Avatar
-avatar: https://kcn3388.club/hexo-theme-obsidian/src/img/avatar.jpg
+avatar: https://res.kcn3388.club/hexo-theme-obsidian/src/img/avatar.jpg
 
 # Disable default scrollbar
 scrollbar: true
@@ -87,7 +87,7 @@ descriptionFour: "我为打破你周遭的囚墙而来，览尽世界，为你�
 google_analytics: 'UA-149874671-1'
 
 # Website favicon
-favicon: https://kcn3388.club/hexo-theme-obsidian/src/img/favicon.png
+favicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/favicon.png
 
 # rss file
 rss: atom.xml
@@ -101,7 +101,7 @@ autoplay: false
 
 # default mp3 file
 mp3:
-  - https://kcn3388.club/hexo-theme-obsidian/src/statics/chengdu.mp3
+  - https://res.kcn3388.club/hexo-theme-obsidian/src/statics/chengdu.mp3
 
 # ---------------------------------------------------------------
 # Plugins
@@ -214,16 +214,16 @@ beian:
 police: 
   enable: true
   beianid: 粤公网安备44010602009049号
-  beianicon: https://kcn3388.club/hexo-theme-obsidian/src/img/beian.png
+  beianicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/beian.png
 
 mouse_effect: 
   enable: true
-  file: https://kcn3388.club/hexo-theme-obsidian/src/js/mouse/pop.js
+  file: https://res.kcn3388.club/hexo-theme-obsidian/src/js/mouse/pop.js
 
 mouse:
   enable: true
-  default: https://kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr118.png
-  pointer: https://kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr117.png
+  default: https://res.kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr118.png
+  pointer: https://res.kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr117.png
 
 l2d:
   enable: true
