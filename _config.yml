@@ -112,8 +112,8 @@ mp3:
 gitalk:
   enable: true
   autoExpand: true
-  clientID: '6d8662c2e315e96b4483'
-  clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
+  clientID: '2635ea75c5cbbcbd9768'
+  clientSecret: '0309679aaa5737de338bed1714bdabece8c4c049'
   repo: 'blog-comments'
   owner: 'kcn3388'
   admin: ['kcn3388']
