@@ -6,39 +6,36 @@ if (typeof (recURL) == "undefined") {
     var recRequest = new XMLHttpRequest;
     var recData
     var httpsurl
-    var musicRequest
-    var musicData
-    var musicURL
-    var loginRequest
+    var newmusicRequest = new XMLHttpRequest;
+    var newmusicData
+    var newmusicURL
+    var loginRequest = new XMLHttpRequest;
+    var loginData
     var loginURL
+    var index
 }
 
-recURL = "//api.kcn3388.club/recommend/songs"
-loginURL = "//api.kcn3388.club/login/login?email=kcn3388@126.com&md5_password=1723e79b321daddbcfcb0ead23309120"
+loginURL = "//api.kcn3388.club/login/login?email=kcn3388@126.com&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
 
 loginRequest.onreadystatechange = function () {
     if (loginRequest.readyState == 4 && loginRequest.status == 200) {
+        loginData = JSON.parse(loginRequest.responseText);
+        // console.log(loginData)
+        recURL = "//api.kcn3388.club/recommend/songs?cookie=" + loginData.cookie
         recRequest.open('GET', recURL);
         recRequest.send();
     }
 }
 
-musicRequest.onreadystatechange = function () {
-    if (musicRequest.readyState == 4 && musicRequest.status == 200) {
-        musicData = JSON.parse(musicRequest.responseText);
-        // console.log(musicData.data[0]);
-        httpsurl = musicData.data[0].url.splice(4, "s");
-        // console.log(httpsurl)
-    }
-}
+loginRequest.open('POST', loginURL);
+loginRequest.send();
 
-recRequest.onreadystatechange = function () {
-    if (recRequest.readyState == 4 && recRequest.status == 200) {
-        recData = JSON.parse(recRequest.responseText);
-        musicURL = "//api.kcn3388.club/song/url?id=" + recData.dailySongs[0].id
-        musicRequest.open('GET', musicURL);
-        musicRequest.send();
-        // console.log(recData.dailySongs[0])
+newmusicRequest.onreadystatechange = function () {
+    if (newmusicRequest.readyState == 4 && newmusicRequest.status == 200) {
+        newmusicData = JSON.parse(newmusicRequest.responseText);
+        // console.log(newmusicData.data[0]);
+        httpsurl = newmusicData.data[0].url.splice(4, "s");
+        // console.log(httpsurl)
         const ap1 = new APlayer({
             element: document.getElementById('dailyplayer'),
             mini: false,
@@ -47,12 +44,38 @@ recRequest.onreadystatechange = function () {
             mutex: true,
             preload: 'metadata',
             audio: [{
-                name: recData.dailySongs[0].name,
-                artist: recData.dailySongs[0].ar[0].name,
+                name: recData.data.dailySongs[index].name,
+                artist: recData.data.dailySongs[index].ar[0].name,
                 url: httpsurl,
-                cover: recData.dailySongs[0].al.picUrl,
+                cover: recData.data.dailySongs[index].al.picUrl,
                 theme: '#ebd0c2'
             }]
         });
     }
+}
+
+recRequest.onreadystatechange = function () {
+    if (recRequest.readyState == 4 && recRequest.status == 200) {
+        recData = JSON.parse(recRequest.responseText);
+        // console.log(recData.data.dailySongs[0])
+        index = randomNum(0, recData.data.dailySongs.length-1)
+        newmusicURL = "//api.kcn3388.club/song/url?id=" + recData.data.dailySongs[index].id
+        newmusicRequest.open('GET', newmusicURL);
+        newmusicRequest.send();
+    }
+}
+
+//生成从minNum到maxNum的随机数
+function randomNum(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
 }
