@@ -15,13 +15,13 @@ if (typeof (recURL) == "undefined") {
     var index
 }
 
-loginURL = "//api.kcn3388.club/login/login?email=kcn3388@126.com&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
+loginURL = "//api.kcn3388.club/netease/login/login?email=kcn3388@126.com&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
 
 loginRequest.onreadystatechange = function () {
     if (loginRequest.readyState == 4 && loginRequest.status == 200) {
         loginData = JSON.parse(loginRequest.responseText);
         // console.log(loginData)
-        recURL = "//api.kcn3388.club/recommend/songs?cookie=" + loginData.cookie
+        recURL = "//api.kcn3388.club/netease/recommend/songs?cookie=" + loginData.cookie
         recRequest.open('GET', recURL);
         recRequest.send();
     }
@@ -59,7 +59,7 @@ recRequest.onreadystatechange = function () {
         recData = JSON.parse(recRequest.responseText);
         // console.log(recData.data.dailySongs[0])
         index = randomNum(0, recData.data.dailySongs.length-1)
-        newmusicURL = "//api.kcn3388.club/song/url?id=" + recData.data.dailySongs[index].id
+        newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id
         newmusicRequest.open('GET', newmusicURL);
         newmusicRequest.send();
     }
