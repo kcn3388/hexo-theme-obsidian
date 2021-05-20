@@ -269,6 +269,11 @@ aplayer:
   enable: true
   # Music list ID
   musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true
 ```
 
 </details>
