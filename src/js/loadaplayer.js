@@ -1,6 +1,6 @@
 var aplayerconf = "<!-- 我使用的APlayer本体 -->"
 aplayerconf += "<div class=\"aplayer\" "
-aplayerconf += "data-id=\"450007071\" "
+aplayerconf += "data-id=\""+ musiclist +"\" "
 aplayerconf += "data-server=\"netease\" "
 aplayerconf += "data-type=\"playlist\" "
 aplayerconf += "data-fixed=\"true\" "

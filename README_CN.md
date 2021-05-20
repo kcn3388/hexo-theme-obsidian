@@ -259,7 +259,13 @@ mouse:
   default: /default.png
 # 悬浮及点击样式
   pointer: /hover.png
-
+  
+# APlayer, 目前只支持网易云歌单
+aplayer:
+  # 启用aplayer
+  enable: true
+  # 歌单ID
+  musiclist: ""
 ```
 
 </details>
