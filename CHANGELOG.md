@@ -2,6 +2,18 @@
 
 [中文更变日志](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.9.1 (May 20, 2021)
+
+- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme config:
+```
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
+```
+
 ## 🚀 v1.4.9 (Apr 8, 2021)
 
 - Add custom social platform for 3rdparty authors. This time support 3 platforms. You should add the following code in the fromt-meta of your article:
