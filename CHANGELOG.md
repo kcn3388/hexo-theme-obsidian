@@ -13,6 +13,13 @@ aplayer:
   # Music list ID
   musiclist: ""
 ```
+- Add anime Live2D.Add the code to theme config:
+```
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true
+```
 
 ## 🚀 v1.4.9 (Apr 8, 2021)
 

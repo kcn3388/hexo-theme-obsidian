@@ -266,6 +266,11 @@ aplayer:
   enable: true
   # 歌单ID
   musiclist: ""
+
+# Live2D小人
+l2d:
+  # 启用live2d
+  enable: true
 ```
 
 </details>
