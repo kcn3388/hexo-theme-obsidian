@@ -33,7 +33,7 @@
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-version: '1.4.8'
+version: '1.4.9.1'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -230,3 +230,4 @@ l2d:
 
 aplayer:
   enable: true
+  musiclist: "450007071"
