@@ -254,7 +254,6 @@ beian:
 # Beian Icon, for example: /img/beian.png
   beianicon:
 
-
 # Custom mouse style
 mouse:
 # Enable custom mouse style
@@ -264,6 +263,17 @@ mouse:
 # Hover sytle
   pointer: /hover.png
 
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true
 ```
 
 </details>
