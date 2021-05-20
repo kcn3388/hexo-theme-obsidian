@@ -46,6 +46,7 @@ var description = '';
     <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/css/font_page/iconfont.css']) %>
     <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
     <% if (theme.aplayer.enable == true) { %>
+    <script>var musiclist = "<%- theme.aplayer.musiclist%>"</script>
     <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
     <!-- 引用依赖 -->
     <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.css'])%>
