@@ -52,7 +52,6 @@ function fetchnewsong() {
                 // console.log(httpsurl)
                 const ap1 = new APlayer({
                     element: document.getElementById('dailyplayer'),
-                    mini: false,
                     autoplay: false,
                     lrcType: 1,
                     mutex: true,
