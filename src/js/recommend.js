@@ -10,6 +10,8 @@ if (typeof (recURL) == "undefined") {
     var loginData
     var loginURL
     var index
+    var lrcData
+    var lrcURL
 }
 
 loginURL = "//api.kcn3388.club/netease/login/login?email=kcn3388@126.com&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
@@ -34,13 +36,12 @@ function fetchrec() {
         .then(result => {
             recData = result;
             if (recData.code == 200) {
-                fetchnewsong();
+                fetchlrc();
             }
         });
 }
 
 function fetchnewsong() {
-    index = randomNum(0, recData.data.dailySongs.length-1)
     newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id
     fetch(newmusicURL)
         .then(response => response.json())
@@ -61,10 +62,22 @@ function fetchnewsong() {
                         artist: recData.data.dailySongs[index].ar[0].name,
                         url: httpsurl,
                         cover: recData.data.dailySongs[index].al.picUrl,
+                        lrc: lrcData.lrc.lyric,
                         theme: '#ebd0c2'
                     }]
                 });
             }
+        });
+}
+
+function fetchlrc() {
+    index = randomNum(0, recData.data.dailySongs.length-1)
+    lrcURL = "//api.kcn3388.club/netease/lrc?id=" + recData.data.dailySongs[index].id
+    fetch(lrcURL)
+        .then(response => response.json())
+        .then(result => {
+            lrcData = result;
+            fetchnewsong();
         });
 }
 
