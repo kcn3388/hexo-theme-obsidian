@@ -54,7 +54,7 @@ function fetchnewsong() {
                     element: document.getElementById('dailyplayer'),
                     mini: false,
                     autoplay: false,
-                    lrcType: false,
+                    lrcType: 1,
                     mutex: true,
                     preload: 'metadata',
                     audio: [{
@@ -72,7 +72,7 @@ function fetchnewsong() {
 
 function fetchlrc() {
     index = randomNum(0, recData.data.dailySongs.length-1)
-    lrcURL = "//api.kcn3388.club/netease/lrc?id=" + recData.data.dailySongs[index].id
+    lrcURL = "//api.kcn3388.club/netease/lyric?id=" + recData.data.dailySongs[index].id
     fetch(lrcURL)
         .then(response => response.json())
         .then(result => {
