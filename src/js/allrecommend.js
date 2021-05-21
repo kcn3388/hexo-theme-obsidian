@@ -79,8 +79,9 @@ function fetchlrc() {
             lrcs.push(lrcData.lrc.lyric);
             if (index == recData.data.dailySongs.length) {
                 var counter = index;
-                for (index = 0; index < counter; index++) {
-                    alist[index].lrc = lrcs[index];
+                index = 0;
+                for (var i = 0; i < counter; i++) {
+                    alist[i].lrc = lrcs[i];
                 }
                 genAPlayer();
             }
@@ -91,7 +92,7 @@ function genAPlayer() {
     const ap1 = new APlayer({
         element: document.getElementById('dailyplayer'),
         mini: false,
-        autoplay: false,
+        autoplay: true,
         lrcType: 1,
         mutex: true,
         preload: 'metadata',
