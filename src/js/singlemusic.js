@@ -36,9 +36,7 @@ function fetchdetails() {
             if (detailData.code == 200) {
                 const ap1 = new APlayer({
                     element: document.getElementById('player1'),
-                    mini: false,
                     autoplay: false,
-                    lrcType: false,
                     mutex: true,
                     preload: 'metadata',
                     audio: [{
