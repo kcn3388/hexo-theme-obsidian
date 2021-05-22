@@ -39,7 +39,7 @@ function fetchdetails() {
             detailData = result;
             if (detailData.code == 200) {
                 const ap1 = new APlayer({
-                    element: document.getElementById('player1'),
+                    element: document.getElementById('pageplayer'),
                     autoplay: false,
                     mutex: true,
                     preload: 'metadata',
@@ -62,11 +62,13 @@ function fetchlrc() {
         .then(response => response.json())
         .then(result => {
             lrcData = result;
-            if (lrcData.nolyric == true)
-                s_lyric = "No lyric";
-            else
-                s_lyric = lrcData.lrc.lyric;
-                
-            fetchdetails();
+            if (lrcData.code == 200) {
+                if (lrcData.nolyric == true)
+                    s_lyric = "No lyric";
+                else
+                    s_lyric = lrcData.lrc.lyric;
+                    
+                fetchdetails();
+            }
         });
 }

@@ -76,11 +76,13 @@ function fetchlrc() {
         .then(response => response.json())
         .then(result => {
             lrcData = result;
-            if (lrcData.nolyric == true)
-                lrcs.push("No lyric");
-            else
-                lrcs.push(lrcData.lrc.lyric);
-                
+            if (lrcData.code == 200) {
+                if (lrcData.nolyric == true)
+                    lrcs.push("No lyric");
+                else
+                    lrcs.push(lrcData.lrc.lyric);
+            }
+            
             if (index == recData.data.dailySongs.length) {
                 var counter = index;
                 index = 0;
