@@ -8,6 +8,7 @@ var aplayers = []
             audio: b,
             mini: null,
             fixed: null,
+            fixedBar: null,
             autoplay: !1,
             mutex: !0,
             lrcType: 3,
