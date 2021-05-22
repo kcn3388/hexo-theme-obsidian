@@ -78,11 +78,13 @@ function fetchlrc() {
         .then(response => response.json())
         .then(result => {
             lrcData = result;
-            if (lrcData.nolyric == true)
-                s_lyric = "No lyric";
-            else
-                s_lyric =lrcData.lrc.lyric;
-            fetchnewsong();
+            if (lrcData.code == 200) {
+                if (lrcData.nolyric == true)
+                    s_lyric = "No lyric";
+                else
+                    s_lyric =lrcData.lrc.lyric;
+                fetchnewsong();
+            }
         });
 }
 
