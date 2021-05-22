@@ -45,7 +45,7 @@ menu:
   CATEGORIES: /categories
   TAGS: /tags
   ARCHIVES: /archives
-  AURORA: https://kcn3388.club
+  AURORA: https://aurora.kcn3388.com
 
 # Page custom titles
 page_titles:
@@ -112,8 +112,8 @@ mp3:
 gitalk:
   enable: true
   autoExpand: true
-  clientID: '2635ea75c5cbbcbd9768'
-  clientSecret: '0309679aaa5737de338bed1714bdabece8c4c049'
+  clientID: '6d8662c2e315e96b4483'
+  clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
   repo: 'blog-comments'
   owner: 'kcn3388'
   admin: ['kcn3388']
@@ -208,11 +208,11 @@ search:
   content: true
 
 beian: 
-  enable: false
+  enable: true
   beianid: 粤ICP备2021022134号
 
 police: 
-  enable: false
+  enable: true
   beianid: 粤公网安备44010602009049号
   beianicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/beian.png
 
@@ -231,3 +231,4 @@ l2d:
 aplayer:
   enable: true
   musiclist: "450007071"
+  fixedbar: false
