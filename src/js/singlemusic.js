@@ -8,10 +8,14 @@ if (typeof (musicURL) == "undefined") {
     var musicData
     var detailData
     var httpsurl
+    var lrcURL
+    var lrcData
+    var s_lrc
 }
 
 musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
 detailURL = "//api.kcn3388.club/netease/song/detail?ids=" + e.className
+lrcURL = "//api.kcn3388.club/netease/lyric?id=" + e.className
 
 fetchsong();
 
@@ -23,7 +27,7 @@ function fetchsong() {
             if (musicData.code == 200) {
                 httpsurl = musicData.data[0].url.splice(4, "s");
                 // console.log(httpsurl)
-                fetchdetails();
+                fetchlrc();
             }
         });
 }
@@ -36,19 +40,33 @@ function fetchdetails() {
             if (detailData.code == 200) {
                 const ap1 = new APlayer({
                     element: document.getElementById('player1'),
-                    mini: false,
                     autoplay: false,
-                    lrcType: false,
                     mutex: true,
                     preload: 'metadata',
                     audio: [{
                         name: detailData.songs[0].name,
                         artist: detailData.songs[0].ar[0].name,
+                        lrcType: 1,
                         url: httpsurl,
                         cover: detailData.songs[0].al.picUrl,
+                        lrc: s_lyric,
                         theme: '#ebd0c2'
                     }]
                 });
             }
+        });
+}
+
+function fetchlrc() {
+    fetch(lrcURL)
+        .then(response => response.json())
+        .then(result => {
+            lrcData = result;
+            if (lrcData.nolyric == true)
+                s_lyric = "No lyric";
+            else
+                s_lyric =lrcData.lrc.lyric;
+                
+            fetchdetails();
         });
 }

@@ -12,6 +12,7 @@ if (typeof (recURL) == "undefined") {
     var index
     var lrcData
     var lrcURL
+    var s_lyric
 }
 
 loginURL = "//api.kcn3388.club/netease/login/login?email=" + window.atob("a2NuMzM4OEAxMjYuY29t") + "&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
@@ -52,7 +53,6 @@ function fetchnewsong() {
                 // console.log(httpsurl)
                 const ap1 = new APlayer({
                     element: document.getElementById('dailyplayer'),
-                    mini: false,
                     autoplay: false,
                     lrcType: 1,
                     mutex: true,
@@ -60,9 +60,10 @@ function fetchnewsong() {
                     audio: [{
                         name: recData.data.dailySongs[index].name,
                         artist: recData.data.dailySongs[index].ar[0].name,
+                        lrcType: 1,
                         url: httpsurl,
                         cover: recData.data.dailySongs[index].al.picUrl,
-                        lrc: lrcData.lrc.lyric,
+                        lrc: s_lyric,
                         theme: '#ebd0c2'
                     }]
                 });
@@ -77,6 +78,10 @@ function fetchlrc() {
         .then(response => response.json())
         .then(result => {
             lrcData = result;
+            if (lrcData.nolyric == true)
+                s_lyric = "No lyric";
+            else
+                s_lyric =lrcData.lrc.lyric;
             fetchnewsong();
         });
 }

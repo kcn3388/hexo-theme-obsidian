@@ -76,7 +76,11 @@ function fetchlrc() {
         .then(response => response.json())
         .then(result => {
             lrcData = result;
-            lrcs.push(lrcData.lrc.lyric);
+            if (lrcData.nolyric == true)
+                lrcs.push("No lyric");
+            else
+                lrcs.push(lrcData.lrc.lyric);
+                
             if (index == recData.data.dailySongs.length) {
                 var counter = index;
                 index = 0;
@@ -91,7 +95,6 @@ function fetchlrc() {
 function genAPlayer() {
     const ap1 = new APlayer({
         element: document.getElementById('dailyplayer'),
-        mini: false,
         autoplay: true,
         lrcType: 1,
         mutex: true,
