@@ -10,7 +10,7 @@ if (typeof (musicURL) == "undefined") {
     var httpsurl
     var lrcURL
     var lrcData
-    var s_lrc
+    var s_lyric
 }
 
 musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
@@ -65,7 +65,7 @@ function fetchlrc() {
             if (lrcData.nolyric == true)
                 s_lyric = "No lyric";
             else
-                s_lyric =lrcData.lrc.lyric;
+                s_lyric = lrcData.lrc.lyric;
                 
             fetchdetails();
         });
