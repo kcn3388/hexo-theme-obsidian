@@ -47,9 +47,15 @@
 </footer>
 <%- partial('_partial/mathjax', null, {cache: true}) %>
 <%- partial('_partial/scripts', null, {cache: true}) %>
-<% if (theme.aplayer.enable == true) { %>
-<!-- 引用依赖 -->
-<script>document.write(aplayerconf)</script>
+<% if (theme.aplayer.enable) { %>
+    <% if (theme.aplayer.meting) { %>
+        <!-- 引用依赖 -->
+        <script>document.write(aplayerconf)</script>
+    <% } %>
+    <% if (!theme.aplayer.meting) { %>
+        <div id="favlist"></div>
+        <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/favorite.js'])%>
+    <% } %>
 <% } %>
 
 <%- theme.footer_html %>
