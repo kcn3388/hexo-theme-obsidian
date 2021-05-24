@@ -50,11 +50,11 @@ var description = '';
         <!-- 引用依赖 -->
         <% if(theme.aplayer.meting) { %>
             <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
-            <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/fixedbar/dist/APlayer.min.css'])%>
-            <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/fixedbar/dist/APlayer.min.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/Meting.js'])%>
+            <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
+            <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/Meting.js'])%>
         <% } %>
         <% if(!theme.aplayer.meting) { %>
-            <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.css'])%>
+            <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
             <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js'])%>
         <% } %>
     <% } %>
