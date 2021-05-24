@@ -49,14 +49,14 @@ var description = '';
     <script>var musiclist = "<%- theme.aplayer.musiclist%>"</script>
     <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
     <!-- 引用依赖 -->
-    <% if(theme.aplayer.enable && theme.aplayer.fixedbar) { %>
+    <% if(theme.aplayer.enable && theme.aplayer.meting) { %>
         <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/fixedbar/dist/APlayer.min.css'])%>
         <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/fixedbar/dist/APlayer.min.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/Meting.js'])%>
     <% } %>
-    <% if(theme.aplayer.enable && !theme.aplayer.fixedbar) { %>
+    <% if(theme.aplayer.enable && !theme.aplayer.meting) { %>
+        <div id="favlist"></div>
         <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.css'])%>
-        <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/Meting.js'])%>
-    <% } %>
+        <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js'])%>
     <% } %>
     
     <% if(theme.mouse.enable) { %>
