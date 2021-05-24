@@ -1,5 +1,3 @@
-const { selectAll } = require("css-select");
-
 String.prototype.splice = function (start, newStr) {
     return this.slice(0, start) + newStr + this.slice(start);
 };
