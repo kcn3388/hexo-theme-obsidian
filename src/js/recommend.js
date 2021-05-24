@@ -5,8 +5,8 @@ if (typeof (recURL) == "undefined") {
     var recURL
     var recData
     var httpsurl
-    var newmusicData
-    var newmusicURL
+    var recmusicData
+    var recmusicURL
     var loginData
     var loginURL
     var index
@@ -37,19 +37,19 @@ function fetchrec() {
         .then(result => {
             recData = result;
             if (recData.code == 200) {
-                fetchlrc();
+                fetchreclrc();
             }
         });
 }
 
-function fetchnewsong() {
-    newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id
-    fetch(newmusicURL)
+function fetchrecsong() {
+    recmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id
+    fetch(recmusicURL)
         .then(response => response.json())
         .then(result => {
-            newmusicData = result;
-            if (newmusicData.code == 200) {
-                httpsurl = newmusicData.data[0].url.splice(4, "s");
+            recmusicData = result;
+            if (recmusicData.code == 200) {
+                httpsurl = recmusicData.data[0].url.splice(4, "s");
                 // console.log(httpsurl)
                 const ap1 = new APlayer({
                     element: document.getElementById('dailyplayer'),
@@ -71,7 +71,7 @@ function fetchnewsong() {
         });
 }
 
-function fetchlrc() {
+function fetchreclrc() {
     index = randomNum(0, recData.data.dailySongs.length-1)
     lrcURL = "//api.kcn3388.club/netease/lyric?id=" + recData.data.dailySongs[index].id
     fetch(lrcURL)
@@ -83,7 +83,7 @@ function fetchlrc() {
                     s_lyric = "No lyric";
                 else
                     s_lyric =lrcData.lrc.lyric;
-                fetchnewsong();
+                fetchrecsong();
             }
         });
 }

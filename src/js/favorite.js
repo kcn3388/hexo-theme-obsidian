@@ -9,7 +9,6 @@ if (typeof (favURL) == "undefined") {
     var listmusicURL
     var loginData
     var loginURL
-    var index
     var alist = new Array()
     var urls = new Array()
     var lrcs = new Array()
@@ -30,6 +29,28 @@ function login() {
         });
 }
 
+const insertfavloop = async () => {
+    for (var i = 0; i < favData.playlist.tracks.length; i++) {
+        listmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[i].id;
+        fetchlistsong();
+        lrcURL = "//api.kcn3388.club/netease/lyric?id=" + favData.playlist.tracks[i].id
+        fetchlrc();
+        await sleep(5);
+        if (i == favData.playlist.tracks.length - 1) {
+            insertfavloop();
+        }
+    }
+}
+
+function insertfavloop() {
+    for (var i = 0; i < favData.playlist.tracks.length; i++) {
+        alist[i].lrc = lrcs[i];
+        alist[i].url = urls[i];
+        if (i == favData.playlist.tracks.length - 1)
+            genAPlayer();
+    }
+}
+
 function fetchfav() {
     favURL = "//api.kcn3388.club/netease/playlist/detail?id=" + musiclist + "&cookie=" + loginData.cookie
     fetch(favURL)
@@ -37,59 +58,45 @@ function fetchfav() {
         .then(result => {
             favData = result;
             if (favData.code == 200) {
-                for (index = 0; index < favData.playlist.tracks.length; index++) {
-                    listmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[index].id;
-                    fetchnewsong();
-                    fetchlrc();
+                for (var i = 0; i < favData.playlist.tracks.length; i++) {
                     alist.push({
-                        name: favData.playlist.tracks[index].name,
-                        artist: favData.playlist.tracks[index].ar[0].name,
-                        cover: favData.playlist.tracks[index].al.picUrl
+                        name: favData.playlist.tracks[i].name,
+                        artist: favData.playlist.tracks[i].ar[0].name,
+                        cover: favData.playlist.tracks[i].al.picUrl
                     });
                 }
+                insertfavloop();
             }
         });
 }
 
-function fetchnewsong() {
+function fetchlistsong() {
     fetch(listmusicURL)
         .then(response => response.json())
         .then(result => {
             listmusicData = result;
             if (listmusicData.code == 200) {
-                httpsurl = listmusicData.data[0].url.splice(4, "s");
-                urls.push(httpsurl);
-                if (index == favData.playlist.tracks.length) {
-                    var counter = index;
-                    for (index = 0; index < counter; index++) {
-                        alist[index].url = urls[index];
-                        fetchlrc();
-                    }
+                if (listmusicData.data[0].url != null) {
+                    httpsurl = listmusicData.data[0].url.splice(4, "s");
+                    urls.push(httpsurl);
+                }
+                else {
+                    urls.push(null);
                 }
             }
         });
 }
 
 function fetchlrc() {
-    lrcURL = "//api.kcn3388.club/netease/lyric?id=" + favData.playlist.tracks[index].id
     fetch(lrcURL)
         .then(response => response.json())
         .then(result => {
             lrcData = result;
             if (lrcData.code == 200) {
-                if (lrcData.nolyric == true)
+                if (lrcData.nolyric == true || lrcData.lrc == null)
                     lrcs.push("No lyric");
                 else
                     lrcs.push(lrcData.lrc.lyric);
-            }
-            
-            if (index == favData.playlist.tracks.length) {
-                var counter = index;
-                index = 0;
-                for (var i = 0; i < counter; i++) {
-                    alist[i].lrc = lrcs[i];
-                }
-                genAPlayer();
             }
         });
 }
@@ -97,7 +104,7 @@ function fetchlrc() {
 function genAPlayer() {
     const ap1 = new APlayer({
         element: document.getElementById('favlist'),
-        autoplay: true,
+        autoplay: false,
         fixed: true,
         lrcType: 1,
         mutex: true,
@@ -107,4 +114,8 @@ function genAPlayer() {
         preload: 'metadata',
         audio: alist
     });
+}
+
+const sleep = (time) => {
+    return new Promise(resolve => setTimeout(resolve, time))
 }
