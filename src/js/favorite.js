@@ -102,7 +102,7 @@ function genAPlayer() {
         lrcType: 1,
         mutex: true,
         order: 'random',
-        loop: all,
+        loop: 'all',
         listFolded: true,
         preload: 'metadata',
         audio: alist
