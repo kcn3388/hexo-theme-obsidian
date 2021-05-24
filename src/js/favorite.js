@@ -1,11 +1,9 @@
-const { selectAll } = require("css-select");
-
 String.prototype.splice = function (start, newStr) {
     return this.slice(0, start) + newStr + this.slice(start);
 };
-if (typeof (recURL) == "undefined") {
-    var recURL
-    var recData
+if (typeof (favURL) == "undefined") {
+    var favURL
+    var favData
     var httpsurl
     var newmusicData
     var newmusicURL
@@ -27,26 +25,26 @@ function login() {
         .then(result => {
             loginData = result;
             if (loginData.code == 200) {
-                fetchrec();
+                fetchfav();
             }
         });
 }
 
-function fetchrec() {
-    recURL = "//api.kcn3388.club/netease/recommend/songs?cookie=" + loginData.cookie
-    fetch(recURL)
+function fetchfav() {
+    favURL = "//api.kcn3388.club/netease/playlist/detail?id=" + musiclist + "&cookie=" + loginData.cookie
+    fetch(favURL)
         .then(response => response.json())
         .then(result => {
-            recData = result;
-            if (recData.code == 200) {
-                for (index = 0; index < recData.data.dailySongs.length; index++) {
-                    newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id;
+            favData = result;
+            if (favData.code == 200) {
+                for (index = 0; index < favData.playlist.tracks.length; index++) {
+                    newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[index].id;
                     fetchnewsong();
                     fetchlrc();
                     alist.push({
-                        name: recData.data.dailySongs[index].name,
-                        artist: recData.data.dailySongs[index].ar[0].name,
-                        cover: recData.data.dailySongs[index].al.picUrl
+                        name: favData.playlist.tracks[index].name,
+                        artist: favData.playlist.tracks[index].ar[0].name,
+                        cover: favData.playlist.tracks[index].al.picUrl
                     });
                 }
             }
@@ -61,7 +59,7 @@ function fetchnewsong() {
             if (newmusicData.code == 200) {
                 httpsurl = newmusicData.data[0].url.splice(4, "s");
                 urls.push(httpsurl);
-                if (index == recData.data.dailySongs.length) {
+                if (index == favData.playlist.tracks.length) {
                     var counter = index;
                     for (index = 0; index < counter; index++) {
                         alist[index].url = urls[index];
@@ -73,7 +71,7 @@ function fetchnewsong() {
 }
 
 function fetchlrc() {
-    lrcURL = "//api.kcn3388.club/netease/lyric?id=" + recData.data.dailySongs[index].id
+    lrcURL = "//api.kcn3388.club/netease/lyric?id=" + favData.playlist.tracks[index].id
     fetch(lrcURL)
         .then(response => response.json())
         .then(result => {
@@ -85,7 +83,7 @@ function fetchlrc() {
                     lrcs.push(lrcData.lrc.lyric);
             }
             
-            if (index == recData.data.dailySongs.length) {
+            if (index == favData.playlist.tracks.length) {
                 var counter = index;
                 index = 0;
                 for (var i = 0; i < counter; i++) {
@@ -98,8 +96,9 @@ function fetchlrc() {
 
 function genAPlayer() {
     const ap1 = new APlayer({
-        element: document.getElementById('dailyplayer'),
+        element: document.getElementById('favlist'),
         autoplay: true,
+        fixed: true,
         lrcType: 1,
         mutex: true,
         order: random,
