@@ -29,7 +29,7 @@ function login() {
         });
 }
 
-const insertfavloop = async () => {
+const getfavloop = async () => {
     for (var i = 0; i < favData.playlist.tracks.length; i++) {
         listmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[i].id;
         fetchlistsong();
@@ -65,7 +65,7 @@ function fetchfav() {
                         cover: favData.playlist.tracks[i].al.picUrl
                     });
                 }
-                insertfavloop();
+                getfavloop();
             }
         });
 }
