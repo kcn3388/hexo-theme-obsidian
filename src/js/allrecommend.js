@@ -21,7 +21,11 @@ loginURL = "//api.kcn3388.club/netease/login/login?email=" + window.atob("a2NuMz
 login();
 
 function login() {
-    fetch(loginURL)
+    fetch(loginURL,
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json;charset=utf-8;' }
+        })
         .then(response => response.json())
         .then(result => {
             loginData = result;
