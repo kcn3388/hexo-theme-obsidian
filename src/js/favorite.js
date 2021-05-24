@@ -5,8 +5,8 @@ if (typeof (favURL) == "undefined") {
     var favURL
     var favData
     var httpsurl
-    var newmusicData
-    var newmusicURL
+    var listmusicData
+    var listmusicURL
     var loginData
     var loginURL
     var index
@@ -38,7 +38,7 @@ function fetchfav() {
             favData = result;
             if (favData.code == 200) {
                 for (index = 0; index < favData.playlist.tracks.length; index++) {
-                    newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[index].id;
+                    listmusicURL = "//api.kcn3388.club/netease/song/url?id=" + favData.playlist.tracks[index].id;
                     fetchnewsong();
                     fetchlrc();
                     alist.push({
@@ -52,12 +52,12 @@ function fetchfav() {
 }
 
 function fetchnewsong() {
-    fetch(newmusicURL)
+    fetch(listmusicURL)
         .then(response => response.json())
         .then(result => {
-            newmusicData = result;
-            if (newmusicData.code == 200) {
-                httpsurl = newmusicData.data[0].url.splice(4, "s");
+            listmusicData = result;
+            if (listmusicData.code == 200) {
+                httpsurl = listmusicData.data[0].url.splice(4, "s");
                 urls.push(httpsurl);
                 if (index == favData.playlist.tracks.length) {
                     var counter = index;
