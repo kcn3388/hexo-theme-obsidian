@@ -101,8 +101,8 @@ function genAPlayer() {
         fixed: true,
         lrcType: 1,
         mutex: true,
-        order: random,
-        loop: all,
+        order: 'random',
+        loop: 'all',
         listFolded: true,
         preload: 'metadata',
         audio: alist
