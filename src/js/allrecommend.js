@@ -7,11 +7,10 @@ if (typeof (recURL) == "undefined") {
     var recURL
     var recData
     var httpsurl
-    var newmusicData
-    var newmusicURL
+    var recmusicData
+    var recmusicURL
     var loginData
     var loginURL
-    var index
     var alist = new Array()
     var urls = new Array()
     var lrcs = new Array()
@@ -32,6 +31,28 @@ function login() {
         });
 }
 
+const getrecloop = async () => {
+    for (var i = 0; i < recData.data.dailySongs.length; i++) {
+        listmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[i].id;
+        fetchrecsong();
+        lrcURL = "//api.kcn3388.club/netease/lyric?id=" + recData.data.dailySongs[i].id
+        fetchreclrc();
+        await sleep(5);
+        if (i == recData.data.dailySongs.length - 1) {
+            insertrecloop();
+        }
+    }
+}
+
+function insertrecloop() {
+    for (var i = 0; i < recData.data.dailySongs.length; i++) {
+        alist[i].lrc = lrcs[i];
+        alist[i].url = urls[i];
+        if (i == recData.data.dailySongs.length - 1)
+            genAPlayer();
+    }
+}
+
 function fetchrec() {
     recURL = "//api.kcn3388.club/netease/recommend/songs?cookie=" + loginData.cookie
     fetch(recURL)
@@ -39,41 +60,32 @@ function fetchrec() {
         .then(result => {
             recData = result;
             if (recData.code == 200) {
-                for (index = 0; index < recData.data.dailySongs.length; index++) {
-                    newmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[index].id;
-                    fetchnewsong();
-                    fetchlrc();
+                for (var i = 0; i < recData.data.dailySongs.length; i++) {
+                    recmusicURL = "//api.kcn3388.club/netease/song/url?id=" + recData.data.dailySongs[i].id;
                     alist.push({
-                        name: recData.data.dailySongs[index].name,
-                        artist: recData.data.dailySongs[index].ar[0].name,
-                        cover: recData.data.dailySongs[index].al.picUrl
+                        name: recData.data.dailySongs[i].name,
+                        artist: recData.data.dailySongs[i].ar[0].name,
+                        cover: recData.data.dailySongs[i].al.picUrl
                     });
                 }
+                getrecloop();
             }
         });
 }
 
-function fetchnewsong() {
-    fetch(newmusicURL)
+function fetchrecsong() {
+    fetch(recmusicURL)
         .then(response => response.json())
         .then(result => {
-            newmusicData = result;
-            if (newmusicData.code == 200) {
-                httpsurl = newmusicData.data[0].url.splice(4, "s");
+            recmusicData = result;
+            if (recmusicData.code == 200) {
+                httpsurl = recmusicData.data[0].url.splice(4, "s");
                 urls.push(httpsurl);
-                if (index == recData.data.dailySongs.length) {
-                    var counter = index;
-                    for (index = 0; index < counter; index++) {
-                        alist[index].url = urls[index];
-                        fetchlrc();
-                    }
-                }
             }
         });
 }
 
-function fetchlrc() {
-    lrcURL = "//api.kcn3388.club/netease/lyric?id=" + recData.data.dailySongs[index].id
+function fetchreclrc() {
     fetch(lrcURL)
         .then(response => response.json())
         .then(result => {
@@ -83,15 +95,6 @@ function fetchlrc() {
                     lrcs.push("No lyric");
                 else
                     lrcs.push(lrcData.lrc.lyric);
-            }
-            
-            if (index == recData.data.dailySongs.length) {
-                var counter = index;
-                index = 0;
-                for (var i = 0; i < counter; i++) {
-                    alist[i].lrc = lrcs[i];
-                }
-                genAPlayer();
             }
         });
 }
@@ -108,4 +111,8 @@ function genAPlayer() {
         preload: 'metadata',
         audio: alist
     });
+}
+
+const sleep = (time) => {
+    return new Promise(resolve => setTimeout(resolve, time))
 }
