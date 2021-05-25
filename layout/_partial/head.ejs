@@ -46,7 +46,10 @@ var description = '';
     <%- css(['//res.kcn3388.club/hexo-theme-obsidian/src/css/font_page/iconfont.css']) %>
     <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
     <% if (theme.aplayer.enable == true) { %>
-        <script>var musiclist = "<%- theme.aplayer.musiclist%>"</script>
+        <script>
+            var musiclist = "<%- theme.aplayer.musiclist%>"
+            var encrypt = "<%- theme.aplayer.data%>"
+        </script>
         <!-- 引用依赖 -->
         <% if(theme.aplayer.meting) { %>
             <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
