@@ -8,19 +8,16 @@ if (typeof (recURL) == "undefined") {
     var recmusicData
     var recmusicURL
     var loginData
-    var loginURL
     var index
     var lrcData
     var lrcURL
     var s_lyric
 }
 
-loginURL = "//api.kcn3388.club/netease/login/login?email=" + window.atob("a2NuMzM4OEAxMjYuY29t") + "&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
-
 login();
 
 function login() {
-    fetch(loginURL,
+    fetch(window.atob(encrypted) + Date.now(),
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json;charset=utf-8;' }
