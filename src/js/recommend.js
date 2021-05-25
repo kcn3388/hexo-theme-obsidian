@@ -17,7 +17,7 @@ if (typeof (recURL) == "undefined") {
 login();
 
 function login() {
-    fetch(window.atob(encrypted) + Date.now(),
+    fetch(window.atob(encrypt) + Date.now(),
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json;charset=utf-8;' }
