@@ -8,18 +8,15 @@ if (typeof (favURL) == "undefined") {
     var listmusicData
     var listmusicURL
     var loginData
-    var loginURL
     var alist = new Array()
     var urls = new Array()
     var lrcs = new Array()
 }
 
-loginURL = "//api.kcn3388.club/netease/login/login?email=" + window.atob("a2NuMzM4OEAxMjYuY29t") + "&md5_password=1723e79b321daddbcfcb0ead23309120&timestamp=" + Date.now()
-
 login();
 
 function login() {
-    fetch(loginURL,
+    fetch(window.atob(encrypted) + Date.now(),
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json;charset=utf-8;' }
