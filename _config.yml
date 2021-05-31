@@ -208,11 +208,11 @@ search:
   content: true
 
 beian: 
-  enable: true
+  enable: false
   beianid: 粤ICP备2021022134号
 
 police: 
-  enable: true
+  enable: false
   beianid: 粤公网安备44010602009049号
   beianicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/beian.png
 
