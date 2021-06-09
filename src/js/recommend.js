@@ -17,7 +17,7 @@ if (typeof (recURL) == "undefined") {
 login();
 
 function login() {
-    fetch(window.atob(encrypted) + Date.now(),
+    fetch(window.atob(encrypt) + Date.now(),
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json;charset=utf-8;' }
@@ -94,12 +94,9 @@ function randomNum(minNum,maxNum){
     switch(arguments.length){ 
         case 1: 
             return parseInt(Math.random()*minNum+1,10); 
-        break; 
         case 2: 
             return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
-        break; 
-            default: 
-                return 0; 
-            break; 
+        default: 
+            return 0; 
     } 
 }
