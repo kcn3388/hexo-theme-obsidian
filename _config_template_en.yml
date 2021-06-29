@@ -41,11 +41,7 @@ version: '1.4.9.1'
 
 # Menu setting | format = title_name: link_url
 menu:
-  ABOUT: /whoami
-  CATEGORIES: /categories
-  TAGS: /tags
-  ARCHIVES: /archives
-  AURORA: https://aurora.kcn3388.com
+  PAGE: /page
 
 # Page custom titles
 page_titles:
@@ -53,23 +49,17 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
-# Social media links
-socials:
-  github: "https://github.com/kcn3388"
-  twitter: "https://twitter.com/kcn3388"
-  bilibili: "https://space.bilibili.com/3789181"
-
 # Enable table of content
 TOC: true
 
 # Home page first post default cover image, default use cover
-welcome_cover: https://res.kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
+welcome_cover: /img/cover.jpg
 
 # Article default cover image
-cover: https://res.kcn3388.club/hexo-theme-obsidian/src/img/default-cover.jpg
+cover: /img/welcome-cover.jpg
 
 # Avatar
-avatar: https://res.kcn3388.club/hexo-theme-obsidian/src/img/avatar.jpg
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
 
 # Disable default scrollbar
 scrollbar: true
@@ -78,16 +68,14 @@ scrollbar: true
 keywords: TriDiamond Obsidian
 
 # Website slogans
-descriptionOne: "更新世界的锋芒"
-descriptionTwo: "在凄惨的处境中回忆幸福，是世间最大的痛苦"
-descriptionThree: "你在乱世中独行，又是否热爱过这一切？"
-descriptionFour: "我为打破你周遭的囚墙而来，览尽世界，为你沉沦"
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # If you use google analytics, please fill in the ID
-google_analytics: 'G-QK4G30EY20'
+google_analytics:
 
 # Website favicon
-favicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/favicon.png
+favicon: /img/favicon.png
 
 # rss file
 rss: atom.xml
@@ -101,7 +89,7 @@ autoplay: false
 
 # default mp3 file
 mp3:
-  - https://res.kcn3388.club/hexo-theme-obsidian/src/statics/chengdu.mp3
+  - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
 # Plugins
@@ -110,25 +98,25 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: true
-  clientID: '6d8662c2e315e96b4483'
-  clientSecret: '955eb71e0ac140a9501cdfa76b54c9759ec207a6'
-  repo: 'blog-comments'
-  owner: 'kcn3388'
-  admin: ['kcn3388']
+  enable: false
+  autoExpand: false
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
-  #proxy: https://shielded-brushlands-08810.herokuapp.com/https://github.com/login/oauth/access_token
-  proxy: https://gitalk.kcn3388.workers.dev/?https://github.com/login/oauth/access_token
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id: QHCOIEBlyjBUMAjaE5ilzafk-gzGzoHsz
-  app_key: ggeGwz8ypB9uiAIYSRH5T0PF
+  enable: true
+  app_id:
+  app_key:
   notify: false
   verify: false
   avatar: 'mp'
@@ -150,12 +138,12 @@ symbols_count_time:
 html_truncate:
   enable: true
   # Characters kept for posts
-  postLength: 100
+  postLength: 250
   # Characters kept for cover posts
   coverLength: 100
   ellipsis: '...'
   # Excluding html tags
-  excludes: ['img', 'h1', 'h2']
+  excludes: ['img']
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
@@ -166,7 +154,8 @@ html_truncate:
 busuanzi:
   enable: true
 
-#Enable social media sharing
+# Enable social media sharing
+# see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
@@ -181,55 +170,44 @@ codemirror:
 # Enabling mathjax support
 mathjax: true
 
-# custom header HTML
-header_html: ''
-
-# custom footer HTML
-footer_html: '
-<!-- 例：百度统计 -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?your_code";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-'
-# Show previous post and next post in post footer if exists
-# Available values: true | false
-post_navigation: true
-
-# Enable Search
-search:
-  path: search.xml
-  field: post
-  content: true
-
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
 beian: 
+# Enable
   enable: true
-  beianid: 粤ICP备2021022134号
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
 
-police: 
+# Police Beian
+police:
+# Enable
   enable: true
-  beianid: 粤公网安备44010602009049号
-  beianicon: https://res.kcn3388.club/hexo-theme-obsidian/src/img/beian.png
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
 
-mouse_effect: 
-  enable: true
-  file: https://res.kcn3388.club/hexo-theme-obsidian/src/js/mouse/pop.js
-
+# Custom mouse style
 mouse:
+# Enable custom mouse style
   enable: true
-  default: https://res.kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr118.png
-  pointer: https://res.kcn3388.club/hexo-theme-obsidian/src/mouse_type/package1/arr117.png
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
 
-l2d:
-  enable: true
-
+# APlayer, now only support netease music list
 aplayer:
+  # Enable aplayer
   enable: true
-  musiclist: "450007071"
-  meting: true
-  data: "Ly9hcGkua2NuMzM4OC5jbHViL25ldGVhc2UvbG9naW4vbG9naW4/ZW1haWw9a2NuMzM4OEAxMjYuY29tJm1kNV9wYXNzd29yZD0xNzIzZTc5YjMyMWRhZGRiY2ZjYjBlYWQyMzMwOTEyMCZ0aW1lc3RhbXA9"
+  # Music list ID
+  musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true
