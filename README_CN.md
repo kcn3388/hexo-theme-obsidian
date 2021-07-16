@@ -84,9 +84,30 @@ npm install
 
 ```yaml
 #! ---------------------------------------------------------------
-#! 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
-#! 但是Hexo默认的highlight配置还是需要关闭的。
-#! ！！所以务必把Hexo默认的highlight配置改为`enable: false` ！！
+#!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+#!  █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!  ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+#! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+#! ---------------------------------------------------------------
+#! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
+#! Thanks to and inspirated by CSS-Tricks
+#! @author: TriDiamond
+#! @github: https://github.com/TriDiamond
+#! @changelogs: https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md
+#! @feedbacks: https://github.com/TriDiamond/hexo-theme-obsidian/issues/new
+#! ---------------------------------------------------------------
+
+#! ---------------------------------------------------------------
+#!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
+#!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#! ---------------------------------------------------------------
+#! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
+#! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
+#! !! So Please make sure you disabled Hexo's default highlight setting !!
+#! ---------------------------------------------------------------
+#! Rebuild files after you changed the config:
+#! `hexo clean && hexo g`
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
@@ -94,6 +115,10 @@ npm install
 #!  auto_detect: true
 #!  tab_replace:
 #! ---------------------------------------------------------------
+
+# 主题版本
+# !! 请勿修改此字段 !!
+version: '1.4.9.2'
 
 # ---------------------------------------------------------------
 # 主题默认设置
@@ -108,6 +133,12 @@ page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
+
+# 社交媒体链接
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
 
 # 是否启用目录
 TOC: true
@@ -241,7 +272,7 @@ beian:
   beianid:
 
 # 公安互联网备案
-beian:
+police:
 # 启用备案
   enable: true
 # 备案地区，例子：粤公网安备
