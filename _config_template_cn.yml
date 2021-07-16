@@ -33,7 +33,11 @@
 
 # 主题版本
 # !! 请勿修改此字段 !!
+<<<<<<< HEAD
 version: '1.4.9.2'
+=======
+version: '1.4.9.1'
+>>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
 
 # ---------------------------------------------------------------
 # 主题默认设置
@@ -49,12 +53,15 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
+<<<<<<< HEAD
 # 社交媒体链接
 socials:
   github: ""
   twitter: ""
   stackoverflow: ""
 
+=======
+>>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
 # 是否启用目录
 TOC: true
 
