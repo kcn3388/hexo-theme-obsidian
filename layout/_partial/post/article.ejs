@@ -77,12 +77,6 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <% if (page.musicid){ %>
-                <div id="musicid" class="<%- page.musicid %>"></div>
-                <div id="pageplayer"></div>
-                <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/singlemusic.js'])%>
-            <% } %>
-            
             <%- page.content %>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -92,12 +86,12 @@
             <% if (page.mp3 == '' | page.mp3 == null){%>
             <ul id="audio-list" style="display:none">
                 <% for (var i in theme.mp3){ %>
-                    <% if (theme.mp3[i].indexOf('http') == 0){%>
-                        <li title='<%- i %>' data-url='<%- theme.mp3[i] %>'></li>
-                    <%} else {%>
-                        <li title='<%- i %>' data-url='<%- config.root + theme.mp3[i] %>'></li>
-                    <%}%>
+                <% if (theme.mp3[i].indexOf('http') == 0){%>
+                <li title='<%- i %>' data-url='<%- theme.mp3[i] %>'></li>
+                <%} else {%>
+                <li title='<%- i %>' data-url='<%- config.root + theme.mp3[i] %>'></li>
                 <%}%>
+                    <%}%>
             </ul>
             <%}%>
             <% if (theme.post_navigation == true) {%>
@@ -113,7 +107,7 @@
                         title="<%- page.next.title %>"><%- page.next.title %></a></div>
                 <% } %>                
             </div>   
-            <% } %>
+            <% } %>            
             <% if (theme.gitalk.enable == true){%>
             <%- partial('gitalk', {post: page}) %>
             <% } %>
@@ -129,41 +123,41 @@
                     <span><%- page.slogan || theme.descriptionOne %></span>
                     <dl>
                         <% if (!page.author){%>
-                        <dd><a href="<%- theme.socials.github %>" target="_blank"><span
+                            <% if (theme.socials.github){%>
+                                <dd><a href="<%- theme.socials.github %>" target="_blank"><span
                                     class=" iconfont icon-github"></span></a></dd>
-                        <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
+                            <% } %>
+                            <% if (theme.socials.twitter){%>
+                                <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
                                     class=" iconfont icon-twitter"></span></a></dd>
-                        <dd><a href="<%- theme.socials.bilibili %>" target="_blank"><span
-                                    class=" iconfont icon-bilibili"></span></a></dd>
+                            <% } %>
+                            <% if (theme.socials.stackoverflow){%>
+                                <dd><a href="<%- theme.socials.stackoverflow %>" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                            <% } %>
                         <% } %>
                         <% if (page.author){%>
                             <% if (page.socials.page){%>
-                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
-                            <% } %>
-                            <% if (page.socials.page2){%>
-                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
-                            <% } %>
-                            <% if (page.socials.page3){%>
-                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
-                            <% } %>
-                        <dd>
-                            <% if (page.socials.page){%>
-                                <a href="<%- page.socials.page.link %>" target="_blank"><span
+                                <dd>
+                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
+                                    <a href="<%- page.socials.page.link %>" target="_blank"><span
                                     class=" iconfont <%- page.socials.page.name %>"></span></a>
+                                </dd>
                             <% } %>
-                        </dd>
-                        <dd>
                             <% if (page.socials.page2){%>
-                                <a href="<%- page.socials.page2.link %>" target="_blank"><span
+                                <dd>
+                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
+                                    <a href="<%- page.socials.page2.link %>" target="_blank"><span
                                     class=" iconfont <%- page.socials.page2.name %>"></span></a>
+                                </dd>
                             <% } %>
-                        </dd>
-                        <dd>
                             <% if (page.socials.page3){%>
-                                <a href="<%- page.socials.page3.link %>" target="_blank"><span
+                                <dd>
+                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
+                                    <a href="<%- page.socials.page3.link %>" target="_blank"><span
                                     class=" iconfont <%- page.socials.page3.name %>"></span></a>
+                                </dd>
                             <% } %>
-                        </dd>
                         <% } %>
                     </dl>
                 </div>
