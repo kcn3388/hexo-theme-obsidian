@@ -3,4 +3,8 @@
 CNAME
 opensource.json
 node_modules
+<<<<<<< HEAD
 _config.yml
+=======
+_config.yml
+>>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0

@@ -33,7 +33,11 @@
 
 # Theme version
 # !! DO NOT EDIT THIS !!
+<<<<<<< HEAD
 version: '1.4.9.2'
+=======
+version: '1.4.9.1'
+>>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -49,12 +53,15 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
+<<<<<<< HEAD
 # Social media links
 socials:
   github: ""
   twitter: ""
   stackoverflow: ""
 
+=======
+>>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
 # Enable table of content
 TOC: true
 
