@@ -102,12 +102,10 @@ npm install
 #!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
 #!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
-#! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
-#! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
-#! !! So Please make sure you disabled Hexo's default highlight setting !!
 #! ---------------------------------------------------------------
-#! Rebuild files after you changed the config:
-#! `hexo clean && hexo g`
+#! 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
+#! 但是Hexo默认的highlight配置还是需要关闭的。
+#! ！！所以务必把Hexo默认的highlight配置改为`enable: false` ！！
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
@@ -118,7 +116,7 @@ npm install
 
 # 主题版本
 # !! 请勿修改此字段 !!
-version: '1.4.9.2'
+version: '1.4.9.3'
 
 # ---------------------------------------------------------------
 # 主题默认设置
@@ -189,6 +187,7 @@ mp3:
 # Gitalk 评论插件
 # 查看 https://github.com/gitalk/gitalk
 gitalk:
+  enable: true
   autoExpand: false
   clientID: ''
   clientSecret: ''
@@ -204,7 +203,7 @@ gitalk:
 # Valine 评论插件 (推荐使用!)
 # 查看 https://valine.js.org/quickstart.html
 valine:
-  enable: true
+  enable: false
   app_id:
   app_key:
   notify: false
