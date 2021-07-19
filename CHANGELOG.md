@@ -67,7 +67,7 @@ beian:
   beianid:
 
 # Police Beian
-beian:
+police:
 # Enable
   enable: true
 # Beian location，for example: 粤公网安备
