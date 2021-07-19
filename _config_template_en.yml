@@ -33,11 +33,7 @@
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-<<<<<<< HEAD
-version: '1.4.9.2'
-=======
-version: '1.4.9.1'
->>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
+version: '1.4.9.3'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -53,15 +49,12 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
-<<<<<<< HEAD
 # Social media links
 socials:
   github: ""
   twitter: ""
   stackoverflow: ""
 
-=======
->>>>>>> 7af2733f44540c49dded688c1e9b0ea2ffb89cb0
 # Enable table of content
 TOC: true
 
@@ -111,7 +104,7 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
+  enable: true
   autoExpand: false
   clientID: ''
   clientSecret: ''
@@ -127,7 +120,7 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: true
+  enable: false
   app_id:
   app_key:
   notify: false
