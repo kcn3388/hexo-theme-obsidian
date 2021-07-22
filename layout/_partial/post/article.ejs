@@ -77,6 +77,11 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
+            <% if (page.musicid){ %>
+                <div id="musicid" class="<%- page.musicid %>"></div>
+                <div id="pageplayer"></div>
+                <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/singlemusic.js'])%>
+            <% } %>
             <%- page.content %>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -131,9 +136,9 @@
                                 <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
                                     class=" iconfont icon-twitter"></span></a></dd>
                             <% } %>
-                            <% if (theme.socials.stackoverflow){%>
-                                <dd><a href="<%- theme.socials.stackoverflow %>" target="_blank"><span
-                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                            <% if (theme.socials.bilibili){%>
+                                <dd><a href="<%- theme.socials.bilibili %>" target="_blank"><span
+                                    class=" iconfont icon-bilibili"></span></a></dd>
                             <% } %>
                         <% } %>
                         <% if (page.author){%>
