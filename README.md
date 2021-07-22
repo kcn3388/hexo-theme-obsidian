@@ -118,7 +118,7 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-version: '1.4.9.2'
+version: '1.4.9.3'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -189,7 +189,7 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
+  enable: true
   autoExpand: false
   clientID: ''
   clientSecret: ''
@@ -205,7 +205,7 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: true
+  enable: false
   app_id:
   app_key:
   notify: false
