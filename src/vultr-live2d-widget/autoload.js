@@ -38,8 +38,8 @@ if (screen.width >= 768) {
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "http://localhost:4000/live2d_api/",
-			cdnPath: "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d_api/"
+			apiPath: "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d_api/"
+// 			cdnPath: "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d_api/"
 		});
 	});
 }
