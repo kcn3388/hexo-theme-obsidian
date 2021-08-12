@@ -142,27 +142,27 @@
                             <% } %>
                         <% } %>
                         <% if (page.author){%>
-                            <% if (page.socials.page){%>
-                                <dd>
-                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
-                                    <a href="<%- page.socials.page.link %>" target="_blank"><span
-                                    class=" iconfont <%- page.socials.page.name %>"></span></a>
-                                </dd>
+                            <dd>
+                                <% if (page.socials.page){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
+                                <a href="<%- page.socials.page.link %>" target="_blank"><span
+                                class=" iconfont <%- page.socials.page.name %>"></span></a>
                             <% } %>
-                            <% if (page.socials.page2){%>
-                                <dd>
-                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
-                                    <a href="<%- page.socials.page2.link %>" target="_blank"><span
-                                    class=" iconfont <%- page.socials.page2.name %>"></span></a>
-                                </dd>
-                            <% } %>
-                            <% if (page.socials.page3){%>
-                                <dd>
-                                    <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
-                                    <a href="<%- page.socials.page3.link %>" target="_blank"><span
-                                    class=" iconfont <%- page.socials.page3.name %>"></span></a>
-                                </dd>
-                            <% } %>
+                            </dd>
+                            <dd>
+                                <% if (page.socials.page2){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
+                                <a href="<%- page.socials.page2.link %>" target="_blank"><span
+                                class=" iconfont <%- page.socials.page2.name %>"></span></a>
+                                <% } %>
+                            </dd>
+                            <dd>
+                                <% if (page.socials.page3){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
+                                <a href="<%- page.socials.page3.link %>" target="_blank"><span
+                                class=" iconfont <%- page.socials.page3.name %>"></span></a>
+                                <% } %>
+                            </dd>
                         <% } %>
                     </dl>
                 </div>
