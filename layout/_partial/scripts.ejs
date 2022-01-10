@@ -1,17 +1,17 @@
 <% if (theme.gitalk.enable == true) { %> <%-
 css(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css'])%> <%-
 js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%> <% } %> <%-
-js(['//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/plugin.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/obsidian.js',
-'//res.kcn3388.club/hexo-theme-obsidian/src/js/jquery.truncate.js', '//res.kcn3388.club/hexo-theme-obsidian/src/js/search.js'])%> <%-
+js(['//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', '//mysql.kcn3388.com/hexo-theme-obsidian/src/js/plugin.js', '//mysql.kcn3388.com/hexo-theme-obsidian/src/js/obsidian.js',
+'//mysql.kcn3388.com/hexo-theme-obsidian/src/js/jquery.truncate.js', '//mysql.kcn3388.com/hexo-theme-obsidian/src/js/search.js'])%> <%-
 js(['//cdn.bootcss.com/typed.js/2.0.10/typed.min.js']) %> <%-
 js(['//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js']) %> <%-
 js(['//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js']) %>
-<%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/title.js'])%>
+<%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/title.js'])%>
 
 <script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
 <% theme.codemirror.modes.forEach(function (mode) { %> <%-
 js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']) %> <% }) %> <% if
-(theme.busuanzi.enable == true) { %> <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/busuanzi.min.js']) %>
+(theme.busuanzi.enable == true) { %> <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/busuanzi.min.js']) %>
 <script>
   $(document).ready(function () {
     if ($('span[id^="busuanzi_"]').length) {
@@ -100,6 +100,6 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
 <%- js([theme.mouse_effect.file]) %>
 <% } %>
 <% if (theme.l2d.enable == true) { %>
-<%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/live2d-widget/autoload.js'])%>
+<%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/autoload.js'])%>
 <% } %>
-<%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/hokusai.js'])%>
+<%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/hokusai.js'])%>
