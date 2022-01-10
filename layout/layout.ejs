@@ -54,7 +54,12 @@
     <% } %>
     <% if (!theme.aplayer.meting) { %>
         <div id="favlist"></div>
-        <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/favorite.js'])%>
+        <% if (!theme.mainland) { %>
+            <%- js(['//res.kcn3388.club/hexo-theme-obsidian/src/js/favorite.js'])%>
+        <% } %>
+        <% if (theme.mainland) { %>
+            <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/favorite.js'])%>
+        <% } %>
     <% } %>
 <% } %>
 
