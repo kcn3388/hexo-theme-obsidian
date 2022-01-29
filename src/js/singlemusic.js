@@ -17,6 +17,8 @@ musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
 detailURL = "//api.kcn3388.club/netease/song/detail?ids=" + e.className
 lrcURL = "//api.kcn3388.club/netease/lyric?id=" + e.className
 
+login();
+
 function login() {
     fetch(window.atob(encrypt) + Date.now(),
         {
