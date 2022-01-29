@@ -17,7 +17,20 @@ musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
 detailURL = "//api.kcn3388.club/netease/song/detail?ids=" + e.className
 lrcURL = "//api.kcn3388.club/netease/lyric?id=" + e.className
 
-fetchsong();
+function login() {
+    fetch(window.atob(encrypt) + Date.now(),
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json;charset=utf-8;' }
+        })
+        .then(response => response.json())
+        .then(result => {
+            loginData = result;
+            if (loginData.code == 200) {
+                fetchsong();
+            }
+        });
+}
 
 function fetchsong() {
     fetch(musicURL)
