@@ -100,6 +100,11 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
 <%- js([theme.mouse_effect.file]) %>
 <% } %>
 <% if (theme.l2d.enable == true) { %>
-<%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/autoload.js'])%>
+  <% if (!theme.mainland) { %>
+    <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/vultr-live2d-widget/autoload.js'])%>
+  <% } %>
+  <% if (theme.mainland) { %>
+    <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/autoload.js'])%>
+  <% } %>
 <% } %>
 <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/hokusai.js'])%>
