@@ -8,6 +8,7 @@ var aplayers = []
             audio: b,
             mini: null,
             fixed: null,
+            fixedBar: null,
             autoplay: !1,
             mutex: !0,
             lrcType: 3,
@@ -32,7 +33,7 @@ var aplayers = []
             aplayers.push(new APlayer(d))
         }
     }
-    var b = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r';
+    var b = 'https://meting.kcn3388.club/?server=:server&type=:type&id=:id&r=:r';
     'undefined' != typeof meting_api && (b = meting_api);
     for (var f = 0; f < aplayers.length; f++)
         try {

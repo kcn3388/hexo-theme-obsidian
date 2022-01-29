@@ -169,7 +169,7 @@ function loadWidget(config) {
 
 	function showHitokoto() {
 		// 增加 hitokoto.cn 的 API
-		fetch("https://v1.hitokoto.cn")
+		fetch("https://api.kcn3388.club/hitokoto?c=a&c=b&c=c")
 			.then(response => response.json())
 			.then(result => {
 				const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.creator}</span> 在 hitokoto.cn 投稿的。`;
@@ -241,7 +241,7 @@ function loadWidget(config) {
 			});
 			$("#live2d").mousedown(function(e) {
 				if(e.which==3){
-				showMessage("秘密通道<br/><a href=\"https://bt.kcn3388.club/kcn3388\" >BT&nbsp;&nbsp;</a><a href=\"https://xianbai.me/learn-md/index.html\">MD&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;</a><a href=\"https://kcn3388.com/editor.html\">编辑&nbsp;&nbsp;</a>",4000,10);
+				showMessage("秘密通道<br/><a href=\"https://mysql.kcn3388.com/admin\">后台&nbsp;&nbsp;</a><a href=\"https://xianbai.me/learn-md/index.html\">MD&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;</a><a href=\"https://mysql.kcn3388.com/editor.html\">编辑&nbsp;&nbsp;</a><a href=\"https://oneindex.kcn3388.club\">OneDrive&nbsp;&nbsp;</a>",5000,10);
 				}
 			});
 			$("#live2d").bind("contextmenu", function(e) {
