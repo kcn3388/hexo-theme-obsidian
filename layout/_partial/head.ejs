@@ -35,17 +35,17 @@ var description = '';
     <% if (theme.rss){ %><link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml"> <% } %>
     <% if (theme.favicon){ %><link rel="icon" href="<%- url_for(theme.favicon) %>"> <% } %>
     <%- css(['//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css'])%>
-    <%- css(['//cdn.bootcss.com/animate.css/3.7.2/animate.min.css'])%>
+    <%- css(['https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css'])%>
     <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/share.min.css'])%>
-    <%- css(['//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css'])%>
-    <%- css(['//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css'])%>
+    <%- css(['https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.1/codemirror.min.css'])%>
+    <%- css(['https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.1/theme/dracula.css'])%>
     <%- css(['css/obsidian.css'])%>
     <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/ball-atom.min.css'])%>
     <%- theme.header_html %>
     <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_bili/iconfont.css']) %>
     <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_page/iconfont.css']) %>
     <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_nga/iconfont.css']) %>
-    <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
+    <%- css(['https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css']) %>
     <% if (theme.aplayer.enable == true) { %>
         <script>
             var musiclist = "<%- theme.aplayer.musiclist%>"
