@@ -241,7 +241,7 @@ function loadWidget(config) {
 			});
 			$("#live2d").mousedown(function(e) {
 				if(e.which==3){
-				showMessage("秘密通道<br/><a href=\"https://mysql.kcn3388.com/admin\">后台&nbsp;&nbsp;</a><a href=\"https://xianbai.me/learn-md/index.html\">MD&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;</a><a href=\"https://mysql.kcn3388.com/editor.html\">编辑&nbsp;&nbsp;</a><a href=\"https://oneindex.kcn3388.club\">OneDrive&nbsp;&nbsp;</a>",5000,10);
+				showMessage("秘密通道<br/><a href=\"https://cloudreve.kcn3388.club\">网盘&nbsp;&nbsp;</a><a href=\"https://xianbai.me/learn-md/index.html\">MD&nbsp;&nbsp;</a><a href=\"https://github.com/kcn3388\">Gay♂hub&nbsp;&nbsp;</a><a href=\"https://obsidian.kcn3388.club/editor.html\">编辑&nbsp;&nbsp;</a><a href=\"https://oneindex.kcn3388.club\">OneDrive&nbsp;&nbsp;</a>",5000,10);
 				}
 			});
 			$("#live2d").bind("contextmenu", function(e) {
