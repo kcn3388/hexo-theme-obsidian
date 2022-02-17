@@ -34,17 +34,17 @@ var description = '';
     <% if (config.author){ %><meta name="author" content="<%= config.author %>"> <% } %>
     <% if (theme.rss){ %><link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml"> <% } %>
     <% if (theme.favicon){ %><link rel="icon" href="<%- url_for(theme.favicon) %>"> <% } %>
-    <%- css(['//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css'])%>
+    <%- css(['https://at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css'])%>
     <%- css(['https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css'])%>
-    <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/share.min.css'])%>
+    <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/css/share.min.css'])%>
     <%- css(['https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.1/codemirror.min.css'])%>
     <%- css(['https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.1/theme/dracula.css'])%>
     <%- css(['css/obsidian.css'])%>
-    <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/ball-atom.min.css'])%>
+    <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/css/ball-atom.min.css'])%>
     <%- theme.header_html %>
-    <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_bili/iconfont.css']) %>
-    <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_page/iconfont.css']) %>
-    <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_nga/iconfont.css']) %>
+    <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_bili/iconfont.css']) %>
+    <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_page/iconfont.css']) %>
+    <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/css/font_nga/iconfont.css']) %>
     <%- css(['https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css']) %>
     <% if (theme.aplayer.enable == true) { %>
         <script>
@@ -53,13 +53,13 @@ var description = '';
         </script>
         <!-- 引用依赖 -->
         <% if(theme.aplayer.meting) { %>
-            <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
-            <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
-            <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js', '//mysql.kcn3388.com/hexo-theme-obsidian/src/js/Meting.js'])%>
+            <%- js(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/loadaplayer.js'])%>
+            <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
+            <%- js(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js', 'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/Meting.js'])%>
         <% } %>
         <% if(!theme.aplayer.meting) { %>
-            <%- css(['//mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
-            <%- js(['//mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js'])%>
+            <%- css(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.css'])%>
+            <%- js(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/aplayer/dist/APlayer.min.js'])%>
         <% } %>
     <% } %>
     
