@@ -3,7 +3,7 @@ if (typeof(root_domain)=="undefined")
 {
     var root_domain = "http://" + window.location.host;
 }
-const live2d_path = "//mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/";
+const live2d_path = "https://mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法

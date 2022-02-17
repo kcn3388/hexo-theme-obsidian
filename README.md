@@ -14,7 +14,7 @@ A dark Hexo theme, it's responsive, simple but elegant.
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[PREVIEW](https://mysql.kcn3388.com/)** | **[CHANGES](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[PREVIEW](https://kcn3388.com/)** | **[CHANGES](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/kcn3388/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
