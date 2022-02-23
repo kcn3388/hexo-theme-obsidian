@@ -3,7 +3,7 @@ if (typeof(root_domain)=="undefined")
 {
     var root_domain = "http://" + window.location.host;
 }
-const live2d_path = "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d-widget/";
+const live2d_path = "https://mysql.kcn3388.com/hexo-theme-obsidian/src/live2d-widget/";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -38,8 +38,8 @@ if (screen.width >= 768) {
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			apiPath: "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d_api/"
-// 			cdnPath: "https://res.kcn3388.club/hexo-theme-obsidian/src/live2d_api/"
+			apiPath: "https://mysql.kcn3388.com/hexo-theme-obsidian/src/live2d_api/"
+// 			cdnPath: "https://mysql.kcn3388.com/hexo-theme-obsidian/src/live2d_api/"
 		});
 	});
 }
