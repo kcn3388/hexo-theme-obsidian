@@ -11,6 +11,7 @@ if (typeof (musicURL) == "undefined") {
     var lrcURL
     var lrcData
     var s_lyric
+    var cookie = "&cookie="
 }
 
 musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
@@ -29,13 +30,14 @@ function login() {
         .then(result => {
             loginData = result;
             if (loginData.code == 200) {
+                cookie += loginData.cookie
                 fetchsong();
             }
         });
 }
 
 function fetchsong() {
-    fetch(musicURL)
+    fetch(musicURL + cookie)
         .then(response => response.json())
         .then(result => {
             musicData = result;
@@ -48,7 +50,7 @@ function fetchsong() {
 }
 
 function fetchdetails() {
-    fetch(detailURL)
+    fetch(detailURL + cookie)
         .then(response => response.json())
         .then(result => {
             detailData = result;
@@ -73,7 +75,7 @@ function fetchdetails() {
 }
 
 function fetchlrc() {
-    fetch(lrcURL)
+    fetch(lrcURL + cookie)
         .then(response => response.json())
         .then(result => {
             lrcData = result;
