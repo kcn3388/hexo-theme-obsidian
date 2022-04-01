@@ -15,30 +15,14 @@ function set_single(){
         var lrcURL
         var lrcData
         var s_lyric
-        var cookie = "&cookie="
+        var cookie = atob(encrypt)
     }
 
     musicURL = "//api.kcn3388.club/netease/song/url?id=" + e.className
     detailURL = "//api.kcn3388.club/netease/song/detail?ids=" + e.className
     lrcURL = "//api.kcn3388.club/netease/lyric?id=" + e.className
 
-    login();
-
-    function login() {
-        fetch(window.atob(encrypt) + Date.now(),
-            {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json;charset=utf-8;' }
-            })
-            .then(response => response.json())
-            .then(result => {
-                loginData = result;
-                if (loginData.code === 200) {
-                    cookie += loginData.cookie
-                    fetchsong();
-                }
-            });
-    }
+    fetchsong();
 
     function fetchsong() {
         fetch(musicURL + cookie)
