@@ -31,7 +31,8 @@
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="<%- url_for(psg.path) %>"><%= psg.title %></a>
+                                        <a class="timeline-title" target="_self"
+                                           href="<%- url_for(psg.path) %>"><%= psg.title %></a>
                                         <p>
                                             <%- truncate(strip_html(psg.content), {
                                                 length: 200,

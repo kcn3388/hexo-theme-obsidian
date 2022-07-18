@@ -8,7 +8,7 @@
         <p class="animated fadeInDown">
             <% if (post.categories.data[0]) { %>
                 <a href="<%- '/categories/' + post.categories.data[0].name %>">
-                  <b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b>
+                    <b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b>
                 </a>
             <% } else { %>
                 <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
@@ -63,7 +63,8 @@
                     omission: "..."
                 }) %>
             <% } %>
-            <span class="read-more"><%- link_to(post.path, __('read_article', 'Read article'), {class: 'posttitle'}) %> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><%- link_to(post.path, __('read_article', 'Read article'), {class: 'posttitle'}) %> <b
+                        class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
