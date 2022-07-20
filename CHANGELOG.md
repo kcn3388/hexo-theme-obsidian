@@ -309,7 +309,7 @@ Code block styles and color syntax looks way more awesome now! OMG！Hope you al
 ### Changes 💥
 
 - Changed the loading icon to `Load Awesome`'s `la-ball-atom`.
-  - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
+    - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
 
 ## 🚀 v1.3.2 (Oct 21, 2019)
 
