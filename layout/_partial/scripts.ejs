@@ -1,17 +1,17 @@
 <% if (theme.gitalk.enable == true) { %> <%-
-    css(['https://cdn.bootcdn.net/ajax/libs/gitalk/1.5.0/gitalk.min.css']) %> <%-
-    js(['https://cdn.bootcdn.net/ajax/libs/gitalk/1.5.0/gitalk.min.js']) %> <% } %> <%-
-js(['https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js', 'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/plugin.js',
+    css(['https://s4.zstatic.net/ajax/libs/gitalk/1.5.0/gitalk.min.css']) %> <%-
+    js(['https://s4.zstatic.net/ajax/libs/gitalk/1.5.0/gitalk.min.js']) %> <% } %> <%-
+js(['https://s4.zstatic.net/ajax/libs/jquery/3.4.1/jquery.min.js', 'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/plugin.js',
     'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/obsidian.js', 'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/jquery.truncate.js',
     'https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/search.js']) %> <%-
-js(['https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.10/typed.min.js']) %> <%-
-js(['https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.12.0/js/md5.min.js']) %> <%-
-js(['https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js']) %>
+js(['https://s4.zstatic.net/ajax/libs/typed.js/2.0.10/typed.min.js']) %> <%-
+js(['https://s4.zstatic.net/ajax/libs/blueimp-md5/2.12.0/js/md5.min.js']) %> <%-
+js(['https://s4.zstatic.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js']) %>
 <%- js(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/title.js']) %>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/codemirror/5.48.4/codemirror.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/codemirror/5.48.4/codemirror.min.js"></script>
 <% theme.codemirror.modes.forEach(function (mode) { %> <%-
-    js(['https://cdn.bootcdn.net/ajax/libs/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']) %> <% }) %> <% if
+    js(['https://s4.zstatic.net/ajax/libs/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']) %> <% }) %> <% if
 (theme.busuanzi.enable == true) { %> <%- js(['https://mysql.kcn3388.com/hexo-theme-obsidian/src/js/busuanzi.min.js']) %>
 <script>
     $(document).ready(function () {
@@ -37,7 +37,7 @@ js(['https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.16/js/social-share.mi
 <% } %> <% if (config.highlightjs) { %>
     <!-- Highlight.js -->
     <%- css(['css/dracula.css']) %>
-    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="https://s4.zstatic.net/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', event => {
             document.querySelectorAll('pre code').forEach(block => {
@@ -68,7 +68,7 @@ js(['https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.16/js/social-share.mi
     }
 </script>
 
-<% if (theme.valine.enable) { %> <%- js(['https://cdn.bootcdn.net/ajax/libs/valine/1.4.16/Valine.min.js']) %>
+<% if (theme.valine.enable) { %> <%- js(['https://s4.zstatic.net/ajax/libs/valine/1.4.16/Valine.min.js']) %>
 <script>
     var valine = new Valine();
 
